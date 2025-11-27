@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title">جمعية الكشاف المسلم في لبنان</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <img
+            src="images/logo.svg"
+            alt="Muslim Scout Association Logo"
+            class="brand-logo"
+          />
+          <span data-i18n="logo_text">الكشاف المسلم</span>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="#who-we-are" data-i18n="nav_about">من نحن</a></li>
+          <li><a href="#sections" data-i18n="nav_sections">الحلقات</a></li>
+          <li><a href="#locations" data-i18n="nav_map">المراكز</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="lang-switch" class="btn btn-outline">English</button>
+          <a href="#" class="btn btn-primary" data-i18n="btn_join"
+            >انضم إلينا</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1 data-i18n="hero_title">نصنع قادة المستقبل</h1>
+        <p data-i18n="hero_sub">مغامرات، مهارات، وقيم تبقى مدى الحياة.</p>
+      </div>
+    </header>
+
+    <section id="sections" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title" data-i18n="sec_groups_title">
+          المراحل الكشفية
+        </h2>
+
+        <div class="cards-grid">
+          <div class="card card-cubs">
+            <div class="card-top bg-yellow"></div>
+            <div class="card-body">
+              <div class="icon">🐯</div>
+              <h3 data-i18n="cat_cubs">مرحلة الجراميز</h3>
+              <p data-i18n="cat_cubs_desc">من عمر 7 إلى 11 سنة</p>
+            </div>
+          </div>
+
+          <div class="card card-scouts">
+            <div class="card-top bg-green"></div>
+            <div class="card-body">
+              <div class="icon">⚜️</div>
+              <h3 data-i18n="cat_scouts">مرحلة الكشافة</h3>
+              <p data-i18n="cat_scouts_desc">من عمر 12 إلى 15 سنة</p>
+            </div>
+          </div>
+
+          <div class="card card-rovers">
+            <div class="card-top bg-red"></div>
+            <div class="card-body">
+              <div class="icon">🎒</div>
+              <h3 data-i18n="cat_rovers">مرحلة الجوالة</h3>
+              <p data-i18n="cat_rovers_desc">من عمر 16 إلى 25 سنة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sdg-section">
+      <div class="container">
+        <h2 class="section-title text-white" data-i18n="sdg_title">
+          أهداف التنمية المستدامة
+        </h2>
+        <div class="sdg-container"></div>
+        <p
+          class="text-white mt-4"
+          data-i18n="sdg_desc"
+          style="text-align: center"
+        >
+          نحن نعمل من أجل عالم أفضل.
+        </p>
+      </div>
+    </section>
+
+    <section id="locations" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="map_title">
+          ابحث عن الفوج الأقرب إليك
+        </h2>
+        <div id="map"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div
+          class="logo logo-white"
+          style="justify-content: center; margin-bottom: 20px"
+        >
+          <img src="images/logo.svg" alt="Logo" class="brand-logo" />
+          <span data-i18n="logo_text">الكشاف المسلم</span>
+        </div>
+
+        <p data-i18n="copyright">
+          © 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

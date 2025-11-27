@@ -1,0 +1,58 @@
+{
+  "ar": {
+    "dir": "rtl",
+    "title": "جمعية الكشاف المسلم في لبنان",
+    "logo_text": "جمعية الكشاف المسلم في لبنان",
+    "nav_home": "الرئيسية",
+    "nav_about": "من نحن",
+    "nav_sections": "المراحل",
+    "nav_map": "المراكز",
+    "btn_join": "انضم إلينا",
+    "hero_title": "نصنع قادة المستقبل",
+    "hero_sub": "مغامرات، مهارات، وقيم تبقى مدى الحياة.",
+    "btn_explore": "اكتشف المزيد",
+    "sec_groups_title": "المراحل الكشفية",
+
+    "cat_cubs": "مرحلة الجراميز",
+    "cat_cubs_desc": "من عمر 7 إلى 11 سنة",
+
+    "cat_scouts": "مرحلة الكشافة",
+    "cat_scouts_desc": "من عمر 12 إلى 15 سنة",
+
+    "cat_rovers": "مرحلة الجوالة",
+    "cat_rovers_desc": "من عمر 16 إلى 25 سنة",
+
+    "sdg_title": "أهداف التنمية المستدامة",
+    "sdg_desc": "نحن نعمل من أجل عالم أفضل.",
+    "map_title": "ابحث عن الفوج الأقرب إليك",
+    "copyright": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة."
+  },
+  "en": {
+    "dir": "ltr",
+    "title": "Muslim Scout Association",
+    "logo_text": "Muslim Scouts",
+    "nav_home": "Home",
+    "nav_about": "About",
+    "nav_sections": "Stages",
+    "nav_map": "Locations",
+    "btn_join": "Join Us",
+    "hero_title": "Skills For Life",
+    "hero_sub": "Adventures, skills, and values for the future.",
+    "btn_explore": "Explore More",
+    "sec_groups_title": "Scouting Stages",
+
+    "cat_cubs": "Cubs Section",
+    "cat_cubs_desc": "Ages 7 to 11",
+
+    "cat_scouts": "Scouts Section",
+    "cat_scouts_desc": "Ages 12 to 15",
+
+    "cat_rovers": "Rovers Section",
+    "cat_rovers_desc": "Ages 16 to 25",
+
+    "sdg_title": "Sustainable Development Goals",
+    "sdg_desc": "We are acting for a better world.",
+    "map_title": "Find a Group Near You",
+    "copyright": "© 2025 Muslim Scout Association Lebanon. All rights reserved."
+  }
+}

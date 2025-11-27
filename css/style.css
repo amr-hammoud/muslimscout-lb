@@ -1,0 +1,480 @@
+/* =========================================
+   1. Font Definitions (Al Jazeera Arabic)
+   ========================================= */
+
+/* Regular (Weight: 400) */
+@font-face {
+  font-family: "AlJazeera";
+  src: url("../fonts/aljazeera-regular.ttf") format("truetype");
+  font-weight: 400; /* Normal */
+  font-style: normal;
+  font-display: swap; /* Performance optimization */
+}
+
+/* Bold (Weight: 700) */
+@font-face {
+  font-family: "AlJazeera";
+  src: url("../fonts/aljazeera-bold.ttf") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light (Weight: 300) */
+@font-face {
+  font-family: "AlJazeera";
+  src: url("../fonts/aljazeera-light.ttf") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- NEW COLOR PALETTE --- */
+  /* Main Brand Purple (From PDF Guidelines) */
+  --primary: #522583;
+
+  /* Stage Colors (From Screenshot) */
+  --cubs-yellow: #f9d242; /* Yellow for Cubs (Jarameez) */
+  --scouts-green: #78a756; /* Green for Scouts (Kashaf) */
+  --rovers-red: #ba3642; /* Red for Rovers (Jawala) */
+
+  /* Accents */
+  --text-dark: #232323;
+  --text-light: #777;
+  --bg-gray: #f9f9f9;
+  --white: #ffffff;
+
+  /* Shapes */
+  --radius-pill: 50px;
+  --radius-card: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   2. Global Typography
+   ========================================= */
+
+body {
+  /* Default English Font (Fallback) */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* FORCE Al Jazeera Font ONLY when language is Arabic */
+html[lang="ar"] body {
+  font-family: "AlJazeera", "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Optional: Make Arabic Headings Bolder/Lighter as needed */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  font-family: "AlJazeera";
+  font-weight: 700; /* Uses the Bold file */
+}
+
+html[lang="ar"] .hero p,
+html[lang="ar"] .card-body p {
+  font-weight: 400; /* Uses the Regular file */
+}
+
+/* Helpers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section {
+  padding: 80px 0;
+}
+.bg-light {
+  background-color: var(--bg-gray);
+}
+.text-white {
+  color: var(--white);
+}
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--white);
+  padding: 15px 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* --- Logo Styling --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+  font-weight: 900;
+  color: var(--primary);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* The Image Itself */
+.brand-logo {
+  height: 50px; /* Adjust height to fit navbar */
+  width: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+/* --- Footer Logo Handling --- */
+/* If you place the logo in the footer, use this class to make it white */
+.logo-white .brand-logo {
+  filter: brightness(0) invert(1); /* Turns any colored SVG to pure white */
+}
+
+.logo-white span {
+  color: white;
+}
+.nav-links {
+  display: list-item;
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 700;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons (Pill Shapes) */
+.btn {
+  padding: 10px 25px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.btn-cta {
+  background: var(--accent);
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  padding: 15px 40px;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh; /* Keeps the hero tall */
+
+  /* 1. Point to your local image */
+  background-image: url("../images/hero-bg.jpg");
+
+  /* 2. Ensure the image covers the full area properly */
+  background-size: cover;
+  background-position: center bottom; /* Aligns to bottom so faces aren't cut off */
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: start;
+}
+
+/* The Overlay (Adjusted for visibility) */
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+
+  /* Old: Heavy Purple Gradient 
+       New: Subtle Black Gradient (Allows image to show through)
+    */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    /* Mostly transparent at top */ rgba(0, 0, 0, 0.6) 100%
+      /* Darker at bottom for text contrast */
+  );
+
+  z-index: 1;
+}
+
+/* Ensure content sits above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 600px;
+  margin-inline-start: 0;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Cards (Scouts UK Style) */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary);
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: white;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card-top {
+  height: 10px;
+  width: 100%;
+}
+
+/* Specific Border/Top Colors */
+.bg-yellow {
+  background: var(--cubs-yellow);
+}
+.bg-green {
+  background: var(--scouts-green);
+}
+.bg-red {
+  background: var(--rovers-red);
+}
+
+/* Add a colored border bottom to the card for extra flair */
+.card-cubs {
+  border-bottom: 5px solid var(--cubs-yellow);
+}
+.card-scouts {
+  border-bottom: 5px solid var(--scouts-green);
+}
+.card-rovers {
+  border-bottom: 5px solid var(--rovers-red);
+}
+
+.card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Icon Colors matching their stage */
+.card-cubs .icon {
+  color: var(--cubs-yellow);
+}
+.card-scouts .icon {
+  color: var(--scouts-green);
+}
+.card-rovers .icon {
+  color: var(--rovers-red);
+}
+
+.card-body {
+  padding: 30px;
+  text-align: center;
+}
+.card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* --- SDG Section --- */
+.sdg-section {
+  background-color: var(--text-dark);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.sdg-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px; /* Slightly smaller gap to fit more items */
+  margin-top: 40px;
+}
+
+/* Card Container */
+.sdg-card {
+  background-color: transparent;
+  width: 220px; /* Reduced slightly for better mobile fit with 9 items */
+  height: 220px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+/* Inner Container (The flipper) */
+.sdg-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); /* Smoother flip */
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 20px; /* Rounded Squares as requested */
+}
+
+.sdg-card:hover .sdg-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Common Styles */
+.sdg-front,
+.sdg-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px; /* Matches parent */
+  overflow: hidden; /* Ensures image doesn't bleed out */
+}
+
+/* --- FRONT FACE (Image) --- */
+.sdg-front {
+  background-color: #fff;
+}
+
+.sdg-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures 1500x1500 fits perfectly */
+  display: block;
+}
+
+/* --- BACK FACE (Text) --- */
+.sdg-back {
+  transform: rotateY(180deg);
+  background-color: var(--primary); /* Muslim Scout Purple */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.sdg-back p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Map */
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: var(--radius-card);
+}
+
+/* Footer */
+.footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  } /* Mobile Menu would go here */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Custom Map Markers */
+.custom-pin {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.9;
+  border: 2px solid white;
+}
+
+/* Legend Styling */
+.map-legend {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}

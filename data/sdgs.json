@@ -1,0 +1,66 @@
+[
+  {
+    "id": 2,
+    "filename": "goal-02.png",
+    "title_ar": "القضاء التام على الجوع",
+    "title_en": "Zero Hunger",
+    "desc_ar": "نوزع حصصاً غذائية خلال الأزمات وشهر رمضان لدعم العائلات المتعففة.",
+    "desc_en": "We organize food drives to support vulnerable families during crises."
+  },
+  {
+    "id": 3,
+    "filename": "goal-03.png",
+    "title_ar": "الصحة الجيدة والرفاه",
+    "title_en": "Good Health & Well-being",
+    "desc_ar": "ننظم ماراثونات رياضية وحملات توعية ضد المخدرات لتعزيز الصحة البدنية والنفسية.",
+    "desc_en": "We organize sports marathons and anti-drug campaigns to promote physical and mental health."
+  },
+  {
+    "id": 4,
+    "filename": "goal-04.png",
+    "title_ar": "التعليم الجيد",
+    "title_en": "Quality Education",
+    "desc_ar": "نوفر برامج تدريبية غير منهجية لصقل المهارات القيادية والحياتية للشباب.",
+    "desc_en": "We provide non-formal education to build leadership and essential life skills for youth."
+  },
+  {
+    "id": 11,
+    "filename": "goal-11.png",
+    "title_ar": "مدن ومجتمعات محلية مستدامة",
+    "title_en": "Sustainable Cities",
+    "desc_ar": "نساعد البلديات في تنظيم السير وتجميل الأحياء للحفاظ على مدننا آمنة ونظيفة.",
+    "desc_en": "We assist municipalities in traffic control and neighborhood beautification to keep cities safe."
+  },
+  {
+    "id": 12,
+    "filename": "goal-12.png",
+    "title_ar": "الاستهلاك والإنتاج المسؤولان",
+    "title_en": "Responsible Consumption",
+    "desc_ar": "نطلق حملات لفرز النفايات وإعادة التدوير للحد من التلوث البيئي.",
+    "desc_en": "We launch recycling and waste sorting campaigns to reduce environmental pollution."
+  },
+  {
+    "id": 13,
+    "filename": "goal-13.png",
+    "title_ar": "العمل المناخي",
+    "title_en": "Climate Action",
+    "desc_ar": "ننفذ مشاريع تشجير دورية لمكافحة التصحر وحماية المناخ اللبناني.",
+    "desc_en": "We conduct regular reforestation projects to combat desertification and protect the climate."
+  },
+  {
+    "id": 15,
+    "filename": "goal-15.png",
+    "title_ar": "الحياة في البر",
+    "title_en": "Life on Land",
+    "desc_ar": "نحمي المحميات الطبيعية ونقيم مخيمات صديقة للبيئة للحفاظ على التنوع البيولوجي.",
+    "desc_en": "We protect nature reserves and run eco-friendly camps to preserve biodiversity."
+  },
+  {
+    "id": 17,
+    "filename": "goal-17.png",
+    "title_ar": "عقد الشراكات لتحقيق الأهداف",
+    "title_en": "Partnerships for Goals",
+    "desc_ar": "نتعاون مع الجمعيات الأهلية لتعزيز أثرنا في خدمة المجتمع.",
+    "desc_en": "We collaborate with the NGOs to maximize our community impact."
+  }
+]
