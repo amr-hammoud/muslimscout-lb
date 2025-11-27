@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول - كشافة المسلم</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  </head>
+  <body class="login-page">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <img src="images/logo.svg" alt="Logo" class="login-logo" />
+          <h2>تسجيل الدخول</h2>
+          <p>بوابة القادة والأعضاء</p>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label>كلمة المرور</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="form-message" id="error-msg" style="display: none">
+            ⚠️ عذراً، هذا الحساب غير موجود.
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">دخول</button>
+        </form>
+
+        <div class="login-footer">
+          <a href="index.html">العودة إلى الرئيسية</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Simple Fake Logic
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const btn = this.querySelector("button");
+          const originalText = btn.textContent;
+
+          // Loading State
+          btn.textContent = "...جارٍ التحقق";
+          btn.style.opacity = "0.7";
+
+          setTimeout(() => {
+            // Show Error
+            document.getElementById("error-msg").style.display = "block";
+            document.getElementById("error-msg").classList.add("shake");
+
+            // Reset Button
+            btn.textContent = originalText;
+            btn.style.opacity = "1";
+          }, 1500);
+        });
+    </script>
+  </body>
+</html>

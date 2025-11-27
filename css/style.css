@@ -478,3 +478,184 @@ html[lang="ar"] .card-body p {
   border-radius: 50%;
   display: inline-block;
 }
+
+/* --- 1. Revamped Header --- */
+.navbar {
+  background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+  backdrop-filter: blur(10px); /* Modern glass effect */
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-actions {
+  gap: 10px;
+}
+
+/* User Icon Button */
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f0f0;
+  color: var(--primary);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.btn-login:hover {
+  background: #e0e0e0;
+  color: var(--primary);
+}
+
+/* --- 2. Impact Stats Bar (Social Proof) --- */
+.impact-section {
+  background-color: var(--primary);
+  color: white;
+  padding: 60px 0;
+  position: relative;
+  z-index: 5;
+  margin-top: -5px; /* Removes gap from hero */
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: var(--cubs-yellow); /* Yellow pops on Purple */
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* --- 3. Login Page Specifics --- */
+.login-page {
+  background: linear-gradient(135deg, var(--bg-gray) 0%, #e6e6e6 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.login-header h2 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.login-header p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right; /* Default for Arabic */
+}
+
+/* Flip text align for LTR */
+html[dir="ltr"] .form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  color: var(--primary);
+}
+
+/* Shake Animation for Error */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.shake {
+  animation: shake 0.3s ease-in-out;
+}

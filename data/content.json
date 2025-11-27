@@ -2,12 +2,11 @@
   "ar": {
     "dir": "rtl",
     "title": "جمعية الكشاف المسلم في لبنان",
-    "logo_text": "جمعية الكشاف المسلم في لبنان",
+    "logo_text": "الكشاف المسلم",
     "nav_home": "الرئيسية",
     "nav_about": "من نحن",
     "nav_sections": "المراحل",
     "nav_map": "المراكز",
-    "btn_join": "انضم إلينا",
     "hero_title": "نصنع قادة المستقبل",
     "hero_sub": "مغامرات، مهارات، وقيم تبقى مدى الحياة.",
     "btn_explore": "اكتشف المزيد",
@@ -25,7 +24,12 @@
     "sdg_title": "أهداف التنمية المستدامة",
     "sdg_desc": "نحن نعمل من أجل عالم أفضل.",
     "map_title": "ابحث عن الفوج الأقرب إليك",
-    "copyright": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة."
+    "copyright": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة.",
+    "btn_login": "دخول القادة",
+    "stat_years": "عاماً من العطاء",
+    "stat_members": "منتسب وقائدة",
+    "stat_regiments": "فوج في لبنان",
+    "stat_activities": "نشاط سنوي"
   },
   "en": {
     "dir": "ltr",
@@ -35,7 +39,6 @@
     "nav_about": "About",
     "nav_sections": "Stages",
     "nav_map": "Locations",
-    "btn_join": "Join Us",
     "hero_title": "Skills For Life",
     "hero_sub": "Adventures, skills, and values for the future.",
     "btn_explore": "Explore More",
@@ -53,6 +56,11 @@
     "sdg_title": "Sustainable Development Goals",
     "sdg_desc": "We are acting for a better world.",
     "map_title": "Find a Group Near You",
-    "copyright": "© 2025 Muslim Scout Association Lebanon. All rights reserved."
+    "copyright": "© 2025 Muslim Scout Association Lebanon. All rights reserved.",
+    "btn_login": "Leader Login",
+    "stat_years": "Years of Service",
+    "stat_members": "Active Members",
+    "stat_regiments": "Regiments",
+    "stat_activities": "Annual Activities"
   }
 }
