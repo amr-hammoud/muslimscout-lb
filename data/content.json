@@ -26,10 +26,20 @@
     "map_title": "ابحث عن الفوج الأقرب إليك",
     "copyright": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة.",
     "btn_login": "دخول القادة",
-    "stat_years": "عاماً من العطاء",
-    "stat_members": "منتسب وقائدة",
+
+    "stat_members": "عدد الفتية والشباب",
+    "stat_leaders": "قائد وقائدة",
+    "stat_regions": "عدد المفوضيات",
     "stat_regiments": "فوج في لبنان",
-    "stat_activities": "نشاط سنوي"
+
+    "identity_title": "إرث من القيادة منذ 1912",
+    "identity_text": "جمعية الكشاف المسلم في لبنان هي أول حركة كشفية في لبنان والعالم العربي. لأكثر من قرن، ونحن نلتزم بتربية أجيال صالحة، ونغرس فيهم حب الوطن، وخدمة المجتمع، وقيم ديننا الحنيف.",
+    "identity_est": "تأسست 1912",
+    "identity_btn": "تاريخنا العريق",
+
+    "values_title": "الوعد الكشفي",
+    "values_quote": "أعاهد مقسماً بالله العظيم على أن أبذل جهدي، لكي أكون خاشعاً لله، ناهجاً نهج رسوله والسلف الصالح. لكي أكون مخلصاً لولي الأمر والوطن. لأن أساعد الناس وباقي المخلوقات في كل حين. لأن أحفظ نفسي قوياً في جسدي، نيراً في عقلي، كريماً في خُلُقي. لأن أعمل بقانون الكشاف.",
+    "values_subtitle": "قيمنا هي بوصلتنا."
   },
   "en": {
     "dir": "ltr",
@@ -58,9 +68,19 @@
     "map_title": "Find a Group Near You",
     "copyright": "© 2025 Muslim Scout Association Lebanon. All rights reserved.",
     "btn_login": "Leader Login",
-    "stat_years": "Years of Service",
-    "stat_members": "Active Members",
+
+    "stat_members": "Youth Members",
+    "stat_leaders": "Leaders",
+    "stat_regions": "Commissions",
     "stat_regiments": "Regiments",
-    "stat_activities": "Annual Activities"
+
+    "identity_title": "A Legacy of Leadership Since 1912",
+    "identity_text": "The Muslim Scout Association in Lebanon is the first scout movement in Lebanon and the Arab world. For over a century, we have been committed to raising righteous generations, instilling in them love for the homeland, community service, and the values of our upright faith.",
+    "identity_est": "Established 1912",
+    "identity_btn": "Our Rich History",
+
+    "values_title": "The Scout Promise",
+    "values_quote": "I pledge by Almighty God to do my best, to be submissive to God, following the path of His Messenger and the righteous predecessors. To be loyal to those in authority and the homeland. To help people and all creatures at all times. To keep myself physically strong, mentally enlightened, and morally noble. And to work by the Scout Law.",
+    "values_subtitle": "Our values are our compass."
   }
 }
