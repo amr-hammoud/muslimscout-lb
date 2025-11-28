@@ -1,7 +1,7 @@
 // State Management
 let currentLang = "ar";
 let translations = {};
-let sdgData = []; // NEW: Store SDG data globally
+let sdgData = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   // 1. Initialize Leaflet Map
@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // 2. Fetch Data (Parallel Loading)
   try {
-    const [contentRes, regimentRes, sdgRes] = await Promise.all([
+    const [contentRes, regimentRes, sdgRes, newsRes] = await Promise.all([
       fetch("data/content.json"),
       fetch("data/regiments.json"),
       fetch("data/sdgs.json"),
+      fetch("data/news.json"),
     ]);
 
     if (!contentRes.ok || !regimentRes.ok || !sdgRes.ok)
@@ -26,6 +27,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Process SDGs
     sdgData = await sdgRes.json();
+
+    // Process News
+    const newsData = await newsRes.json();
+    renderNews(newsData);
 
     // Initial Render
     updatePageContent();
@@ -44,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       e.preventDefault();
       currentLang = currentLang === "ar" ? "en" : "ar";
       langBtn.textContent = currentLang === "ar" ? "English" : "العربية";
-      updatePageContent(); // This now triggers SDG re-render too
+      updatePageContent();
     });
   }
 
@@ -104,8 +109,6 @@ function renderSDGs(data) {
 
   container.innerHTML = data
     .map((item) => {
-      // Dynamic Path Construction based on Language
-      // Structure: images/sdgs/ar/goal-02.png OR images/sdgs/en/goal-02.png
       const imagePath = `images/sdgs/${currentLang}/${item.filename}`;
 
       return `
@@ -159,7 +162,6 @@ function renderMap(data, map) {
   const legend = L.control({ position: "bottomright" });
   legend.onAdd = function () {
     const div = L.DomUtil.create("div", "map-legend");
-    // Simple localization for Legend Title
     div.innerHTML = `<h4>${
       currentLang === "ar" ? "المفوضيات" : "Districts"
     }</h4>`;
@@ -176,3 +178,55 @@ function renderMap(data, map) {
   };
   legend.addTo(map);
 }
+
+// Helper: Render News
+function renderNews(data) {
+  const container = document.getElementById("news-grid");
+  if (!container) return;
+
+  container.innerHTML = data
+    .map(
+      (item) => `
+        <a href="${
+          item.link
+        }" target="_blank" class="news-card" style="text-decoration:none; display:block;">
+            <img src="${item.image}" alt="News" class="news-img" loading="lazy">
+            <div class="news-content">
+                <span class="news-date">${
+                  currentLang === "ar" ? item.date_ar : item.date_en
+                }</span>
+                <h3>${currentLang === "ar" ? item.title_ar : item.title_en}</h3>
+                <p>${
+                  currentLang === "ar" ? item.excerpt_ar : item.excerpt_en
+                }</p>
+                <span class="btn-link" style="color:var(--primary); font-weight:bold;">
+                    ${translations[currentLang].news_btn} &rarr;
+                </span>
+            </div>
+        </a>
+    `
+    )
+    .join("");
+}
+
+// Helper: Scroll SDGs (Slider Logic with RTL support)
+window.scrollSDG = function (direction) {
+  const container = document.getElementById("sdg-scroll");
+  const scrollAmount = 250; // Adjusted for new card size + gap
+  const isRTL = document.documentElement.dir === "rtl";
+
+  // LOGIC:
+  // If LTR: Next(1) -> Scroll Right (+)
+  // If RTL: Next(1) -> Scroll Left (-)
+
+  let scrollValue = direction * scrollAmount;
+
+  if (isRTL) {
+    scrollValue = -scrollValue; // Invert for RTL
+  }
+
+  container.scrollBy({
+    left: scrollValue,
+    behavior: "smooth",
+  });
+};

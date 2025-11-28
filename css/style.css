@@ -2,42 +2,40 @@
    1. Font Definitions (Al Jazeera Arabic)
    ========================================= */
 
-/* Regular (Weight: 400) */
 @font-face {
   font-family: "AlJazeera";
   src: url("../fonts/aljazeera-regular.ttf") format("truetype");
-  font-weight: 400; /* Normal */
-  font-style: normal;
-  font-display: swap; /* Performance optimization */
-}
-
-/* Bold (Weight: 700) */
-@font-face {
-  font-family: "AlJazeera";
-  src: url("../fonts/aljazeera-bold.ttf") format("truetype");
-  font-weight: 700; /* Bold */
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-/* Light (Weight: 300) */
+@font-face {
+  font-family: "AlJazeera";
+  src: url("../fonts/aljazeera-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "AlJazeera";
   src: url("../fonts/aljazeera-light.ttf") format("truetype");
-  font-weight: 300; /* Light */
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  /* --- NEW COLOR PALETTE --- */
-  /* Main Brand Purple (From PDF Guidelines) */
+  /* --- COLOR PALETTE --- */
+  /* Main Brand Purple */
   --primary: #522583;
 
-  /* Stage Colors (From Screenshot) */
-  --cubs-yellow: #f9d242; /* Yellow for Cubs (Jarameez) */
-  --scouts-green: #78a756; /* Green for Scouts (Kashaf) */
-  --rovers-red: #ba3642; /* Red for Rovers (Jawala) */
+  /* Stage Colors */
+  --cubs-yellow: #f9d242; /* Jarameez */
+  --scouts-green: #78a756; /* Kashaf */
+  --advanced-orange: #f26522; /* Advanced (Moutaqadem) - NEW ORANGE */
+  --rovers-red: #ba3642; /* Jawala */
 
   /* Accents */
   --text-dark: #232323;
@@ -61,7 +59,6 @@
    ========================================= */
 
 body {
-  /* Default English Font (Fallback) */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
@@ -73,17 +70,11 @@ html[lang="ar"] body {
   font-family: "AlJazeera", "Segoe UI", Tahoma, sans-serif;
 }
 
-/* Optional: Make Arabic Headings Bolder/Lighter as needed */
 html[lang="ar"] h1,
 html[lang="ar"] h2,
 html[lang="ar"] h3 {
   font-family: "AlJazeera";
-  font-weight: 700; /* Uses the Bold file */
-}
-
-html[lang="ar"] .hero p,
-html[lang="ar"] .card-body p {
-  font-weight: 400; /* Uses the Regular file */
+  font-weight: 700;
 }
 
 /* Helpers */
@@ -99,74 +90,76 @@ html[lang="ar"] .card-body p {
   background-color: var(--bg-gray);
 }
 .text-white {
-  color: var(--white);
-}
-.mt-4 {
-  margin-top: 2rem;
+  color: var(--white) !important;
 }
 
-/* Navbar */
+/* --- Navbar --- */
 .navbar {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
   padding: 15px 0;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: padding 0.3s;
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* --- Logo Styling --- */
+
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px; /* Space between icon and text */
+  gap: 12px;
+  text-decoration: none;
   font-weight: 900;
   color: var(--primary);
   font-size: 1.2rem;
-  text-decoration: none;
+  z-index: 1001;
 }
 
-/* The Image Itself */
 .brand-logo {
-  height: 50px; /* Adjust height to fit navbar */
-  width: auto; /* Maintain aspect ratio */
-  display: block;
+  height: 45px;
+  width: auto;
 }
 
-/* --- Footer Logo Handling --- */
-/* If you place the logo in the footer, use this class to make it white */
-.logo-white .brand-logo {
-  filter: brightness(0) invert(1); /* Turns any colored SVG to pure white */
-}
-
-.logo-white span {
-  color: white;
-}
 .nav-links {
-  display: list-item;
-  list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 .nav-links a {
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 700;
-  transition: 0.3s;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
 }
+
 .nav-links a:hover {
   color: var(--primary);
 }
+
 .nav-actions {
   display: flex;
+  align-items: center;
   gap: 15px;
+  z-index: 1001;
 }
 
-/* Buttons (Pill Shapes) */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
 .btn {
   padding: 10px 25px;
   border-radius: var(--radius-pill);
@@ -189,553 +182,20 @@ html[lang="ar"] .card-body p {
   border: 2px solid var(--primary);
   color: var(--primary);
 }
-.btn-cta {
-  background: var(--accent);
-  color: var(--text-dark);
-  font-size: 1.1rem;
-  padding: 15px 40px;
-}
-
-/* Hero Section */
-.hero {
-  height: 80vh; /* Keeps the hero tall */
-
-  /* 1. Point to your local image */
-  background-image: url("../images/hero-bg.jpg");
-
-  /* 2. Ensure the image covers the full area properly */
-  background-size: cover;
-  background-position: center bottom; /* Aligns to bottom so faces aren't cut off */
-  background-repeat: no-repeat;
-
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-align: start;
-}
-
-/* The Overlay (Adjusted for visibility) */
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-
-  /* Old: Heavy Purple Gradient 
-       New: Subtle Black Gradient (Allows image to show through)
-    */
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    /* Mostly transparent at top */ rgba(0, 0, 0, 0.6) 100%
-      /* Darker at bottom for text contrast */
-  );
-
-  z-index: 1;
-}
-
-/* Ensure content sits above the overlay */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  max-width: 600px;
-  margin-inline-start: 0;
-}
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-/* Cards (Scouts UK Style) */
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: var(--primary);
-}
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-.card {
-  background: white;
-  border-radius: var(--radius-card);
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: translateY(-10px);
-}
-.card-top {
-  height: 10px;
-  width: 100%;
-}
-
-/* --- Card Images (New) --- */
-.card-img-wrapper {
-  width: 160px; /* Size of the circle */
-  height: 160px;
-  margin: 0 auto 20px; /* Center it */
-  border-radius: 50%; /* Make it a perfect circle */
-  padding: 5px; /* Space for the white gap */
-  background: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card-img-wrapper {
-  transform: scale(1.05); /* Gentle zoom on hover */
-}
-
-.card-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%; /* Crop image to circle */
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle inner border */
-}
-
-/* Colored Rings to match the section */
-.border-yellow {
-  border: 3px solid var(--cubs-yellow);
-}
-.border-green {
-  border: 3px solid var(--scouts-green);
-}
-.border-red {
-  border: 3px solid var(--rovers-red);
-}
-
-/* Update Card Body Spacing */
-.card-body {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-/* Remove old Icon styles if you want to clean up */
-.card .icon {
-  display: none;
-}
-
-/* Specific Border/Top Colors */
-.bg-yellow {
-  background: var(--cubs-yellow);
-}
-.bg-green {
-  background: var(--scouts-green);
-}
-.bg-red {
-  background: var(--rovers-red);
-}
-
-/* Add a colored border bottom to the card for extra flair */
-.card-cubs {
-  border-bottom: 5px solid var(--cubs-yellow);
-}
-.card-scouts {
-  border-bottom: 5px solid var(--scouts-green);
-}
-.card-rovers {
-  border-bottom: 5px solid var(--rovers-red);
-}
-
-.card .icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-/* Icon Colors matching their stage */
-.card-cubs .icon {
-  color: var(--cubs-yellow);
-}
-.card-scouts .icon {
-  color: var(--scouts-green);
-}
-.card-rovers .icon {
-  color: var(--rovers-red);
-}
-
-.card-body {
-  padding: 30px;
-  text-align: center;
-}
-.card .icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-/* --- SDG Section --- */
-.sdg-section {
-  background-color: var(--text-dark);
-  padding: 80px 0;
-  overflow: hidden;
-}
-
-.sdg-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px; /* Slightly smaller gap to fit more items */
-  margin-top: 40px;
-}
-
-/* Card Container */
-.sdg-card {
-  background-color: transparent;
-  width: 220px; /* Reduced slightly for better mobile fit with 9 items */
-  height: 220px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-/* Inner Container (The flipper) */
-.sdg-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1); /* Smoother flip */
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 20px; /* Rounded Squares as requested */
-}
-
-.sdg-card:hover .sdg-inner {
-  transform: rotateY(180deg);
-}
-
-/* Front and Back Common Styles */
-.sdg-front,
-.sdg-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 20px; /* Matches parent */
-  overflow: hidden; /* Ensures image doesn't bleed out */
-}
-
-/* --- FRONT FACE (Image) --- */
-.sdg-front {
-  background-color: #fff;
-}
-
-.sdg-front img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures 1500x1500 fits perfectly */
-  display: block;
-}
-
-/* --- BACK FACE (Text) --- */
-.sdg-back {
-  transform: rotateY(180deg);
-  background-color: var(--primary); /* Muslim Scout Purple */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  text-align: center;
-}
-
-.sdg-back p {
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 600;
-}
-
-/* --- Map Section --- */
-.section-header {
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.section-subtitle {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  max-width: 700px;
-  margin: 10px auto 0;
-}
-
-.map-wrapper {
-  background: white;
-  padding: 10px;
-  border-radius: var(--radius-card);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-#map {
-  height: 500px;
-  width: 100%;
-  border-radius: 12px; /* Inner radius */
-  z-index: 1;
-}
-
-/* --- Footer (Fat Layout) --- */
-.footer {
-  background-color: var(--primary);
-  color: white;
-  padding: 80px 0 30px;
-  margin-top: auto;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr; /* Brand column is wider */
-  gap: 40px;
-  margin-bottom: 60px;
-}
-
-.footer-col h4 {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: var(--cubs-yellow); /* Yellow text for headings */
-  font-weight: 700;
-}
-
-/* Brand Column */
-.footer-mission {
-  margin-top: 20px;
-  opacity: 0.8;
-  line-height: 1.6;
-  max-width: 300px;
-}
-
-/* Links */
-.footer-links {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 12px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  opacity: 0.8;
-  transition: 0.3s;
-}
-
-.footer-links a:hover {
-  opacity: 1;
-  padding-inline-start: 5px; /* Subtle movement on hover */
-  color: var(--cubs-yellow);
-}
-
-/* Contact List */
-.footer-contact-list {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-contact-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-  opacity: 0.9;
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.social-link {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.social-link:hover {
-  background: var(--cubs-yellow);
-  color: var(--primary);
-  transform: translateY(-3px);
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 30px;
-  text-align: center;
-  font-size: 0.9rem;
-  opacity: 0.6;
-}
-
-/* Responsive Footer */
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr; /* 2x2 grid on tablets */
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-grid {
-    grid-template-columns: 1fr; /* Stacked on mobile */
-    text-align: center;
-  }
-
-  .footer-contact-list li {
-    justify-content: center;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-
-  .logo {
-    justify-content: center;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  } /* Mobile Menu would go here */
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-}
-
-/* Custom Map Markers */
-.custom-pin {
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pin-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  opacity: 0.9;
-  border: 2px solid white;
-}
-
-/* Legend Styling */
-.map-legend {
-  background: white;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-.legend-item {
+.btn-login {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 5px;
-}
-.legend-color {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-/* --- Navbar (Responsive Upgrade) --- */
-.navbar {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px); /* Glass effect */
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: padding 0.3s;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  font-weight: 900;
+  background: #f0f0f0;
   color: var(--primary);
-  font-size: 1.2rem;
-  z-index: 1001; /* Above mobile menu */
+  padding: 10px 20px;
+  font-size: 0.9rem;
 }
-
-.brand-logo {
-  height: 45px;
-  width: auto;
-}
-
-/* Navigation Links (Desktop) */
-.nav-links {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 700;
-  font-size: 1rem;
-  transition: color 0.3s;
-  position: relative;
-}
-
-.nav-links a:hover {
+.btn-login:hover {
+  background: #e0e0e0;
   color: var(--primary);
 }
 
-/* Actions Area */
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  z-index: 1001;
-}
-
-.btn-sm {
-  padding: 8px 16px;
-  font-size: 0.85rem;
-}
-
-/* Mobile Specifics (Hidden by default) */
 .mobile-only {
   display: none;
 }
@@ -743,12 +203,12 @@ html[lang="ar"] .card-body p {
   display: none;
 }
 
-/* --- Mobile Responsive Styles --- */
+/* Mobile Responsive Styles */
 @media (max-width: 992px) {
   .nav-links {
     position: fixed;
     top: 0;
-    right: 0; /* Arabic Default (Will flip in JS/CSS if LTR) */
+    right: 0;
     width: 100%;
     height: 100vh;
     background: var(--primary);
@@ -756,26 +216,20 @@ html[lang="ar"] .card-body p {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    transform: translateY(-100%); /* Hidden Upwards */
+    transform: translateY(-100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
   }
 
-  /* Active State (Menu Open) */
   .nav-links.active {
     transform: translateY(0);
   }
 
   .nav-links a {
-    color: white; /* White text on purple menu */
+    color: white;
     font-size: 1.5rem;
   }
 
-  .nav-links a:hover {
-    color: var(--cubs-yellow);
-  }
-
-  /* Toggle visibility */
   .desktop-only {
     display: none;
   }
@@ -783,7 +237,6 @@ html[lang="ar"] .card-body p {
     display: block;
   }
 
-  /* Hamburger Icon */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -799,7 +252,6 @@ html[lang="ar"] .card-body p {
     transition: 0.3s;
   }
 
-  /* Hamburger Animation when Active */
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 6px);
   }
@@ -811,20 +263,31 @@ html[lang="ar"] .card-body p {
   }
 }
 
-/* RTL Support for Mobile Menu */
 html[dir="ltr"] .nav-links {
   right: auto;
   left: 0;
 }
 
-/* --- 2. Impact Stats Bar (Social Proof) --- */
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background-image: url("../images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Impact Stats */
 .impact-section {
   background-color: var(--primary);
   color: white;
   padding: 60px 0;
   position: relative;
   z-index: 5;
-  margin-top: -5px; /* Removes gap from hero */
+  margin-top: -5px;
 }
 
 .impact-grid {
@@ -838,7 +301,7 @@ html[dir="ltr"] .nav-links {
   font-size: 3rem;
   font-weight: 900;
   margin-bottom: 10px;
-  color: var(--cubs-yellow); /* Yellow pops on Purple */
+  color: var(--cubs-yellow);
 }
 
 .stat-item p {
@@ -847,129 +310,7 @@ html[dir="ltr"] .nav-links {
   opacity: 0.9;
 }
 
-/* --- 3. Login Page Specifics --- */
-.login-page {
-  background: linear-gradient(135deg, var(--bg-gray) 0%, #e6e6e6 100%);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.login-container {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-}
-
-.login-card {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.login-logo {
-  height: 80px;
-  margin-bottom: 20px;
-}
-
-.login-header h2 {
-  color: var(--primary);
-  margin-bottom: 5px;
-}
-
-.login-header p {
-  color: var(--text-light);
-  margin-bottom: 30px;
-  font-size: 0.9rem;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  text-align: right; /* Default for Arabic */
-}
-
-/* Flip text align for LTR */
-html[dir="ltr"] .form-group {
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--text-dark);
-}
-
-.form-group input {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #eee;
-  border-radius: 8px;
-  font-family: inherit;
-  transition: border 0.3s;
-}
-
-.form-group input:focus {
-  border-color: var(--primary);
-  outline: none;
-}
-
-.btn-block {
-  width: 100%;
-  margin-top: 10px;
-}
-
-.form-message {
-  background: #ffebee;
-  color: #c62828;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.login-footer {
-  margin-top: 20px;
-  font-size: 0.9rem;
-}
-
-.login-footer a {
-  color: var(--text-light);
-  text-decoration: none;
-}
-
-.login-footer a:hover {
-  color: var(--primary);
-}
-
-/* Shake Animation for Error */
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(5px);
-  }
-  50% {
-    transform: translateX(-5px);
-  }
-  75% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-.shake {
-  animation: shake 0.3s ease-in-out;
-}
-
-/* --- Identity Section (Heritage) --- */
+/* Identity Section */
 .identity-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -977,16 +318,11 @@ html[dir="ltr"] .form-group {
   align-items: center;
 }
 
-.identity-image {
-  position: relative;
-}
-
 .identity-image img {
   width: 100%;
   border-radius: var(--radius-card);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  /* Sepia filter to give it a "Historic" feel */
-  filter: sepia(0.3);
+  filter: sepia(0.5);
   transition: 0.3s;
 }
 
@@ -994,45 +330,11 @@ html[dir="ltr"] .form-group {
   filter: sepia(0);
 }
 
-/* The "1912" Badge */
-.year-badge {
-  position: absolute;
-  bottom: -20px;
-  right: -20px; /* Flips automatically in LTR via logic below if needed, but absolute positioning usually needs specific care */
-  background: var(--primary);
-  color: var(--cubs-yellow);
-  font-size: 2rem;
-  font-weight: 900;
-  padding: 15px 30px;
-  border-radius: var(--radius-pill);
-  box-shadow: 0 10px 20px rgba(82, 37, 131, 0.4);
-  z-index: 2;
-}
-
-/* RTL fix for badge */
-html[dir="rtl"] .year-badge {
-  right: auto;
-  left: -20px;
-}
-
-.identity-content h2 {
-  margin-bottom: 20px;
-  color: var(--primary);
-}
-
-.identity-content p {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  margin-bottom: 30px;
-  line-height: 1.8;
-}
-
-/* --- Values Section (Parallax) --- */
+/* Values Section */
 .values-section {
   position: relative;
-  /* Campfire background */
   background-image: url("../images/flag-bg.jpg");
-  background-attachment: fixed; /* Creates Parallax Effect */
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   padding: 120px 0;
@@ -1043,7 +345,7 @@ html[dir="rtl"] .year-badge {
 .overlay-dark {
   position: absolute;
   inset: 0;
-  background: rgba(82, 37, 131, 0.85); /* Purple tint overlay */
+  background: rgba(82, 37, 131, 0.85);
 }
 
 .values-content {
@@ -1051,12 +353,6 @@ html[dir="rtl"] .year-badge {
   z-index: 2;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.scout-sign-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  display: block;
 }
 
 .values-content h2 {
@@ -1069,27 +365,437 @@ html[dir="rtl"] .year-badge {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.4;
-  font-family: "AlJazeera", serif; /* Use your custom font */
   margin-bottom: 20px;
 }
 
-.values-sub {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+/* Cards (Stages) */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary);
 }
 
-/* Mobile Adjustment */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-top {
+  height: 10px;
+  width: 100%;
+}
+
+/* 2. New Image Wrapper Style */
+.card-img-wrapper {
+  width: 100%; /* 80% of the card width */
+  height: auto; /* Allow height to scale naturally */
+  aspect-ratio: 1/1; /* Keep it square-ish */
+  margin: 0 auto 15px;
+  padding: 0;
+  border-radius: 50%; /* Remove circle */
+  background: transparent; /* Remove background */
+  box-shadow: none; /* Remove shadow box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Show full image without cropping */
+  border-radius: 50%; /* Remove circle crop */
+  filter: drop-shadow(
+    0 5px 10px rgba(0, 0, 0, 0.1)
+  ); /* Add shadow to the image itself */
+}
+
+.card-body {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* UPDATED BORDERS FOR ORANGE (ADVANCED) */
+.border-yellow {
+  border: 3px solid var(--cubs-yellow);
+}
+.border-green {
+  border: 3px solid var(--scouts-green);
+}
+.border-orange {
+  border: 3px solid var(--advanced-orange);
+} /* NEW */
+.border-red {
+  border: 3px solid var(--rovers-red);
+}
+
+.bg-yellow {
+  background: var(--cubs-yellow);
+}
+.bg-green {
+  background: var(--scouts-green);
+}
+.bg-orange {
+  background: var(--advanced-orange);
+} /* NEW */
+.bg-red {
+  background: var(--rovers-red);
+}
+
+.card-cubs {
+  border-bottom: 5px solid var(--cubs-yellow);
+}
+.card-scouts {
+  border-bottom: 5px solid var(--scouts-green);
+}
+.card-advanced {
+  border-bottom: 5px solid var(--advanced-orange);
+} /* NEW */
+.card-rovers {
+  border-bottom: 5px solid var(--rovers-red);
+}
+
+/* SDG Section */
+.sdg-section {
+  background-color: var(--text-dark);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.sdg-slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  padding: 0 40px;
+}
+
+.sdg-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px 0;
+  scrollbar-width: none;
+}
+
+.sdg-container::-webkit-scrollbar {
+  display: none;
+}
+
+.sdg-card {
+  flex: 0 0 220px;
+  height: 220px;
+  scroll-snap-align: center;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.sdg-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.sdg-card:hover .sdg-inner {
+  transform: rotateY(180deg);
+}
+
+.sdg-front,
+.sdg-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.sdg-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sdg-back {
+  transform: rotateY(180deg);
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.slider-btn:hover {
+  background: var(--primary);
+}
+.prev-btn {
+  left: 0;
+}
+.next-btn {
+  right: 0;
+}
+
+/* ARROW FLIP FOR RTL */
+/* This flips the arrow icons so they point correctly in RTL mode */
+html[dir="rtl"] .slider-btn {
+  transform: translateY(-50%) scaleX(-1);
+}
+
+/* News Section */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.news-card {
+  background: white;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+a.news-card {
+  background: white;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  /* Fixes: */
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+a.news-card h3 {
+  color: var(--primary); /* Keep title purple */
+}
+
+a.news-card p {
+  color: var(--text-dark); /* Keep text dark/grey */
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 20px;
+}
+.news-date {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  display: block;
+}
+.news-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+.news-content a {
+  text-decoration: none;
+}
+
+/* Map Section */
+.section-subtitle {
+  margin-bottom: 40px;
+  text-align: center; /* Aligns Right in AR, Left in EN automatically */
+  padding: 0 10px;
+}
+
+.map-wrapper {
+  background: white;
+  padding: 10px;
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.custom-pin {
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.map-legend {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 80px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--cubs-yellow);
+  font-weight: 700;
+}
+
+.footer-mission {
+  margin-top: 20px;
+  opacity: 0.8;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer-links li {
+  margin-bottom: 12px;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+}
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.social-link:hover {
+  background: var(--cubs-yellow);
+}
+
+.logo-white .brand-logo {
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
 @media (max-width: 768px) {
-  .identity-grid {
+  .footer-grid {
     grid-template-columns: 1fr;
+    text-align: center;
   }
-  .year-badge {
-    font-size: 1.5rem;
-    padding: 10px 20px;
-  }
-  .values-content blockquote {
-    font-size: 1.5rem;
+  .footer-contact-list li,
+  .social-icons,
+  .logo {
+    justify-content: center;
   }
 }

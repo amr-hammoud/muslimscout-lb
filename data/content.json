@@ -6,50 +6,58 @@
     "nav_home": "الرئيسية",
     "nav_about": "من نحن",
     "nav_sections": "المراحل",
+    "nav_media": "المركز الإعلامي",
     "nav_map": "المراكز",
+    "btn_login": "دخول القادة",
+    "btn_join": "انضم إلينا",
+
     "hero_title": "نصنع قادة المستقبل",
     "hero_sub": "مغامرات، مهارات، وقيم تبقى مدى الحياة.",
     "btn_explore": "اكتشف المزيد",
+
+    "stat_years": "عاماً من العطاء",
+    "stat_members": "عدد الفتية والشباب",
+    "stat_regiments": "فوج في لبنان",
+    "stat_activities": "نشاط سنوي",
+
+    "identity_title": "إرث من القيادة منذ 1910",
+    "identity_text": "جمعية الكشاف المسلم في لبنان هي أول حركة كشفية في لبنان والعالم العربي. لأكثر من قرن، ونحن نلتزم بتربية أجيال صالحة، ونغرس فيهم حب الوطن، وخدمة المجتمع، وقيم ديننا الحنيف",
+    "identity_btn": "تاريخنا العريق",
+
     "sec_groups_title": "المراحل الكشفية",
 
-    "cat_cubs": "مرحلة الجراميز",
-    "cat_cubs_desc": "من عمر 7 إلى 11 سنة",
+    "cat_cubs": "الجراميز والزهرات",
+    "cat_cubs_desc": "من 7 إلى 10 سنوات",
 
-    "cat_scouts": "مرحلة الكشافة",
-    "cat_scouts_desc": "من عمر 12 إلى 15 سنة",
+    "cat_scouts": "الكشافة والمرشدات",
+    "cat_scouts_desc": "من 11 إلى 14 سنة",
 
-    "cat_rovers": "مرحلة الجوالة",
-    "cat_rovers_desc": "من عمر 16 إلى 25 سنة",
+    "cat_advanced": "الكشاف المتقدم والمرشدة المتقدمة",
+    "cat_advanced_desc": "من 15 إلى 17 سنة",
 
-    "sdg_title": "أهداف التنمية المستدامة",
-    "sdg_desc": "نحن نعمل من أجل عالم أفضل.",
-    "map_title": "ابحث عن الفوج الأقرب إليك",
-    "copyright": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة.",
-    "btn_login": "دخول القادة",
-
-    "stat_members": "عدد الفتية والشباب",
-    "stat_leaders": "قائد وقائدة",
-    "stat_regions": "عدد المفوضيات",
-    "stat_regiments": "فوج في لبنان",
-
-    "identity_title": "إرث من القيادة منذ 1912",
-    "identity_text": "جمعية الكشاف المسلم في لبنان هي أول حركة كشفية في لبنان والعالم العربي. لأكثر من قرن، ونحن نلتزم بتربية أجيال صالحة، ونغرس فيهم حب الوطن، وخدمة المجتمع، وقيم ديننا الحنيف.",
-    "identity_est": "تأسست 1912",
-    "identity_btn": "تاريخنا العريق",
+    "cat_rovers": "الجوالة والدليلات",
+    "cat_rovers_desc": "من 18 إلى 24 سنة",
 
     "values_title": "الوعد الكشفي",
     "values_quote": "أعاهد مقسماً بالله العظيم على أن أبذل جهدي، لكي أكون خاشعاً لله، ناهجاً نهج رسوله والسلف الصالح. لكي أكون مخلصاً لولي الأمر والوطن. لأن أساعد الناس وباقي المخلوقات في كل حين. لأن أحفظ نفسي قوياً في جسدي، نيراً في عقلي، كريماً في خُلُقي. لأن أعمل بقانون الكشاف.",
     "values_subtitle": "قيمنا هي بوصلتنا.",
 
+    "sdg_title": "أهداف التنمية المستدامة (17)",
+    "sdg_desc": "نحن نعمل لتحقيق الأهداف العالمية.",
+
+    "news_title": "آخر الأخبار",
+    "news_btn": "اقرأ المزيد",
+
+    "map_title": "ابحث عن الفوج الأقرب إليك",
     "map_desc": "ننتشر في جميع المحافظات اللبنانية. استخدم الخريطة للعثور على أقرب فوج إليك وتواصل معنا للانضمام.",
 
-    "footer_mission": "منذ عام 1912، ونحن نربي أجيالاً تخدم الوطن وتلتزم بالقيم.",
+    "footer_mission": "منذ عام 1910، ونحن نربي أجيالاً تخدم الوطن وتلتزم بالقيم.",
     "footer_links": "روابط سريعة",
     "footer_contact": "تواصل معنا",
     "footer_address": "بيروت، لبنان",
     "footer_email": "info@muslimscout-lb.org",
     "footer_follow": "تابعونا",
-    "footer_rights": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة."
+    "footer_rights": "© 2025 قادة الكشاف المسلم في لبنان. جميع الحقوق محفوظة."
   },
   "en": {
     "dir": "ltr",
@@ -58,49 +66,57 @@
     "nav_home": "Home",
     "nav_about": "About",
     "nav_sections": "Stages",
+    "nav_media": "Media Center",
     "nav_map": "Locations",
+    "btn_login": "Leader Login",
+    "btn_join": "Join Us",
+
     "hero_title": "Skills For Life",
     "hero_sub": "Adventures, skills, and values for the future.",
     "btn_explore": "Explore More",
+
+    "stat_years": "Years of Service",
+    "stat_members": "Youth Members",
+    "stat_regiments": "Regiments",
+    "stat_activities": "Annual Activities",
+
+    "identity_title": "A Legacy of Leadership Since 1910",
+    "identity_text": "The Muslim Scout Association is the first scout movement in Lebanon and the Arab world. For over a century, we have been committed to raising righteous generations, instilling in them love for the homeland, community service, and the values of our upright faith.",
+    "identity_btn": "Our Rich History",
+
     "sec_groups_title": "Scouting Stages",
 
-    "cat_cubs": "Cubs Section",
-    "cat_cubs_desc": "Ages 7 to 11",
+    "cat_cubs": "Cubs & Brownies",
+    "cat_cubs_desc": "Ages 7 to 10",
 
-    "cat_scouts": "Scouts Section",
-    "cat_scouts_desc": "Ages 12 to 15",
+    "cat_scouts": "Scouts & Guides",
+    "cat_scouts_desc": "Ages 11 to 14",
 
-    "cat_rovers": "Rovers Section",
-    "cat_rovers_desc": "Ages 16 to 25",
+    "cat_advanced": "Advanced Scouts",
+    "cat_advanced_desc": "Ages 15 to 17",
 
-    "sdg_title": "Sustainable Development Goals",
-    "sdg_desc": "We are acting for a better world.",
-    "map_title": "Find a Group Near You",
-    "copyright": "© 2025 Muslim Scout Association Lebanon. All rights reserved.",
-    "btn_login": "Leader Login",
-
-    "stat_members": "Youth Members",
-    "stat_leaders": "Leaders",
-    "stat_regions": "Commissions",
-    "stat_regiments": "Regiments",
-
-    "identity_title": "A Legacy of Leadership Since 1912",
-    "identity_text": "The Muslim Scout Association in Lebanon is the first scout movement in Lebanon and the Arab world. For over a century, we have been committed to raising righteous generations, instilling in them love for the homeland, community service, and the values of our upright faith.",
-    "identity_est": "Established 1912",
-    "identity_btn": "Our Rich History",
+    "cat_rovers": "Rovers & Rangers",
+    "cat_rovers_desc": "Ages 18 to 24",
 
     "values_title": "The Scout Promise",
     "values_quote": "I pledge by Almighty God to do my best, to be submissive to God, following the path of His Messenger and the righteous predecessors. To be loyal to those in authority and the homeland. To help people and all creatures at all times. To keep myself physically strong, mentally enlightened, and morally noble. And to work by the Scout Law.",
     "values_subtitle": "Our values are our compass.",
 
+    "sdg_title": "Sustainable Development Goals (17)",
+    "sdg_desc": "We are acting for a better world.",
+
+    "news_title": "Latest News",
+    "news_btn": "Read More",
+
+    "map_title": "Find a Group Near You",
     "map_desc": "We are present across all Lebanese governorates. Use the map to find your nearest group and join the adventure.",
 
-    "footer_mission": "Since 1912, raising generations that serve the nation and uphold values.",
+    "footer_mission": "Since 1910, raising generations that serve the nation and uphold values.",
     "footer_links": "Quick Links",
     "footer_contact": "Contact Us",
     "footer_address": "Beirut, Lebanon",
     "footer_email": "info@muslimscout-lb.org",
     "footer_follow": "Follow Us",
-    "footer_rights": "© 2025 Muslim Scout Association Lebanon. All rights reserved."
+    "footer_rights": "© 2025 Muslim Scout Leaders Lebanon. All rights reserved."
   }
 }

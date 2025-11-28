@@ -23,19 +23,14 @@
     <nav class="navbar">
       <div class="container nav-container">
         <a href="#" class="logo">
-          <img
-            src="images/logo.svg"
-            alt="Muslim Scout Association Logo"
-            class="brand-logo"
-          />
-          <span class="logo-text" data-i18n="logo_text">الكشاف المسلم</span>
+          <img src="images/logo.png" alt="Logo" class="brand-logo" />
         </a>
 
         <ul class="nav-links" id="nav-links">
           <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
           <li><a href="#identity" data-i18n="nav_about">من نحن</a></li>
+          <li><a href="#news" data-i18n="nav_media">المركز الإعلامي</a></li>
           <li><a href="#sections" data-i18n="nav_sections">المراحل</a></li>
-          <li><a href="#values" data-i18n="values_title">القيم</a></li>
           <li><a href="#locations" data-i18n="nav_map">المراكز</a></li>
           <li class="mobile-only">
             <a href="login.html" data-i18n="btn_login">دخول القادة</a>
@@ -60,13 +55,7 @@
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="overlay"></div>
-      <div class="container hero-content">
-        <h1 data-i18n="hero_title">نصنع قادة المستقبل</h1>
-        <p data-i18n="hero_sub">مغامرات، مهارات، وقيم تبقى مدى الحياة.</p>
-      </div>
-    </header>
+    <header class="hero"></header>
 
     <section id="impact" class="impact-section">
       <div class="container">
@@ -95,11 +84,7 @@
       <div class="container">
         <div class="identity-grid">
           <div class="identity-image">
-            <img
-              src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              alt="Scout History"
-            />
-            <div class="year-badge" data-i18n="identity_est">تأسست 1912</div>
+            <img src="images/identity.png" alt="Scout History" />
           </div>
           <div class="identity-content">
             <h2
@@ -107,7 +92,7 @@
               data-i18n="identity_title"
               style="text-align: inherit"
             >
-              إرث من القيادة منذ 1912
+              إرث من القيادة منذ 1910
             </h2>
             <p data-i18n="identity_text">جمعية الكشاف المسلم...</p>
           </div>
@@ -131,20 +116,15 @@
         <h2 class="section-title" data-i18n="sec_groups_title">
           المراحل الكشفية
         </h2>
-
         <div class="cards-grid">
           <div class="card card-cubs">
             <div class="card-top bg-yellow"></div>
             <div class="card-body">
               <div class="card-img-wrapper border-yellow">
-                <img
-                  src="images/cards/cubs.png"
-                  alt="Cubs Scout"
-                  loading="lazy"
-                />
+                <img src="images/cards/cubs.png" alt="Cubs" loading="lazy" />
               </div>
-              <h3 data-i18n="cat_cubs">مرحلة الجراميز</h3>
-              <p data-i18n="cat_cubs_desc">من عمر 7 إلى 11 سنة</p>
+              <h3 data-i18n="cat_cubs">الجراميز والزهرات</h3>
+              <p data-i18n="cat_cubs_desc">من 7 إلى 10 سنوات</p>
             </div>
           </div>
 
@@ -154,12 +134,28 @@
               <div class="card-img-wrapper border-green">
                 <img
                   src="images/cards/scouts.png"
-                  alt="Boy Scout"
+                  alt="Scouts"
                   loading="lazy"
                 />
               </div>
-              <h3 data-i18n="cat_scouts">مرحلة الكشافة</h3>
-              <p data-i18n="cat_scouts_desc">من عمر 12 إلى 15 سنة</p>
+              <h3 data-i18n="cat_scouts">الكشافة والمرشدات</h3>
+              <p data-i18n="cat_scouts_desc">من 11 إلى 14 سنة</p>
+            </div>
+          </div>
+
+          <div class="card card-advanced">
+            <div class="card-top bg-orange"></div>
+            <div class="card-body">
+              <div class="card-img-wrapper border-orange">
+                <img
+                  src="images/cards/advanced.png"
+                  alt="Advanced"
+                  loading="lazy"
+                  style="filter: sepia(0.5)"
+                />
+              </div>
+              <h3 data-i18n="cat_advanced">الكشاف المتقدم</h3>
+              <p data-i18n="cat_advanced_desc">من 15 إلى 17 سنة</p>
             </div>
           </div>
 
@@ -169,12 +165,12 @@
               <div class="card-img-wrapper border-red">
                 <img
                   src="images/cards/rovers.png"
-                  alt="Rover Scout"
+                  alt="Rovers"
                   loading="lazy"
                 />
               </div>
-              <h3 data-i18n="cat_rovers">مرحلة الجوالة</h3>
-              <p data-i18n="cat_rovers_desc">من عمر 16 إلى 25 سنة</p>
+              <h3 data-i18n="cat_rovers">الجوالة والدليلات</h3>
+              <p data-i18n="cat_rovers_desc">من 18 إلى 24 سنة</p>
             </div>
           </div>
         </div>
@@ -186,14 +182,23 @@
         <h2 class="section-title text-white" data-i18n="sdg_title">
           أهداف التنمية المستدامة
         </h2>
-        <div class="sdg-container"></div>
-        <p
-          class="text-white mt-4"
-          data-i18n="sdg_desc"
-          style="text-align: center"
-        >
-          نحن نعمل من أجل عالم أفضل.
-        </p>
+
+        <div class="sdg-slider-wrapper">
+          <button class="slider-btn prev-btn" onclick="scrollSDG(-1)">
+            &#10094;
+          </button>
+          <div class="sdg-container" id="sdg-scroll"></div>
+          <button class="slider-btn next-btn" onclick="scrollSDG(1)">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="news_title">آخر الأخبار</h2>
+        <div class="news-grid" id="news-grid"></div>
       </div>
     </section>
 
@@ -220,15 +225,14 @@
           <div class="footer-col brand-col">
             <div class="logo logo-white">
               <img
-                src="images/logo.svg"
+                src="images/logo.png"
                 alt="Logo"
                 class="brand-logo"
                 style="height: 60px"
               />
-              <span data-i18n="logo_text">الكشاف المسلم</span>
             </div>
             <p class="footer-mission" data-i18n="footer_mission">
-              منذ عام 1912...
+              منذ عام 1910...
             </p>
           </div>
 
@@ -258,15 +262,33 @@
             </ul>
           </div>
 
-          <!-- <div class="footer-col">
+          <div class="footer-col">
             <h4 data-i18n="footer_follow">تابعونا</h4>
             <div class="social-icons">
-              <a href="#" class="social-link facebook">F</a>
-              <a href="#" class="social-link instagram">I</a>
-              <a href="#" class="social-link twitter">X</a>
-              <a href="#" class="social-link youtube">Y</a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61583989485820"
+                target="_blank"
+                class="social-link"
+              >
+                <svg viewBox="0 0 320 512">
+                  <path
+                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@manahejmuslimscout"
+                target="_blank"
+                class="social-link"
+              >
+                <svg viewBox="0 0 576 512">
+                  <path
+                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+                  />
+                </svg>
+              </a>
             </div>
-          </div> -->
+          </div>
         </div>
 
         <div class="footer-bottom">

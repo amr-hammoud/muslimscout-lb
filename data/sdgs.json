@@ -1,5 +1,13 @@
 [
   {
+    "id": 1,
+    "filename": "goal-01.png",
+    "title_ar": "القضاء على الفقر",
+    "title_en": "No Poverty",
+    "desc_ar": "نجمع التبرعات والزكاة لمساعدة الأسر المحتاجة في مجتمعاتنا.",
+    "desc_en": "We collect donations and Zakat to help needy families in our communities."
+  },
+  {
     "id": 2,
     "filename": "goal-02.png",
     "title_ar": "القضاء التام على الجوع",
@@ -12,48 +20,112 @@
     "filename": "goal-03.png",
     "title_ar": "الصحة الجيدة والرفاه",
     "title_en": "Good Health & Well-being",
-    "desc_ar": "ننظم ماراثونات رياضية وحملات توعية ضد المخدرات لتعزيز الصحة البدنية والنفسية.",
-    "desc_en": "We organize sports marathons and anti-drug campaigns to promote physical and mental health."
+    "desc_ar": "ننظم ماراثونات رياضية وحملات توعية ضد المخدرات.",
+    "desc_en": "We organize sports marathons and anti-drug awareness campaigns."
   },
   {
     "id": 4,
     "filename": "goal-04.png",
     "title_ar": "التعليم الجيد",
     "title_en": "Quality Education",
-    "desc_ar": "نوفر برامج تدريبية غير منهجية لصقل المهارات القيادية والحياتية للشباب.",
-    "desc_en": "We provide non-formal education to build leadership and essential life skills for youth."
+    "desc_ar": "نوفر برامج تدريبية غير منهجية لصقل المهارات القيادية.",
+    "desc_en": "We provide non-formal education to build leadership skills."
+  },
+  {
+    "id": 5,
+    "filename": "goal-05.png",
+    "title_ar": "المساواة بين الجنسين",
+    "title_en": "Gender Equality",
+    "desc_ar": "نمكن الفتيات من خلال برامج الزهرات والمرشدات ليكنّ قائدات.",
+    "desc_en": "We empower girls through Brownies and Guides programs to become leaders."
+  },
+  {
+    "id": 6,
+    "filename": "goal-06.png",
+    "title_ar": "المياه النظيفة والنظافة",
+    "title_en": "Clean Water and Sanitation",
+    "desc_ar": "نقوم بحملات توعية حول ترشيد استهلاك المياه وأهمية النظافة.",
+    "desc_en": "We conduct awareness campaigns on water conservation and hygiene."
+  },
+  {
+    "id": 7,
+    "filename": "goal-07.png",
+    "title_ar": "طاقة نظيفة وبأسعار معقولة",
+    "title_en": "Affordable and Clean Energy",
+    "desc_ar": "نستخدم الطاقة الشمسية في مخيماتنا ونشجع على الحلول المستدامة.",
+    "desc_en": "We use solar energy in our camps and promote sustainable solutions."
+  },
+  {
+    "id": 8,
+    "filename": "goal-08.png",
+    "title_ar": "العمل اللائق ونمو الاقتصاد",
+    "title_en": "Decent Work and Economic Growth",
+    "desc_ar": "ندرب الشباب على المهارات المهنية والحرفية لدخول سوق العمل.",
+    "desc_en": "We train youth in vocational skills to enter the job market."
+  },
+  {
+    "id": 9,
+    "filename": "goal-09.png",
+    "title_ar": "الصناعة والابتكار",
+    "title_en": "Industry, Innovation and Infrastructure",
+    "desc_ar": "نشجع الابتكار والمشاريع العلمية في برامجنا الكشفية.",
+    "desc_en": "We encourage innovation and scientific projects in our programs."
+  },
+  {
+    "id": 10,
+    "filename": "goal-10.png",
+    "title_ar": "الحد من أوجه عدم المساواة",
+    "title_en": "Reduced Inequalities",
+    "desc_ar": "نرحب بالجميع في الكشفية بغض النظر عن الخلفية الاجتماعية.",
+    "desc_en": "We welcome everyone in Scouting regardless of social background."
   },
   {
     "id": 11,
     "filename": "goal-11.png",
     "title_ar": "مدن ومجتمعات محلية مستدامة",
     "title_en": "Sustainable Cities",
-    "desc_ar": "نساعد البلديات في تنظيم السير وتجميل الأحياء للحفاظ على مدننا آمنة ونظيفة.",
-    "desc_en": "We assist municipalities in traffic control and neighborhood beautification to keep cities safe."
+    "desc_ar": "نساعد في تجميل الأحياء وتنظيم السير للحفاظ على مدننا.",
+    "desc_en": "We assist in neighborhood beautification and traffic control."
   },
   {
     "id": 12,
     "filename": "goal-12.png",
     "title_ar": "الاستهلاك والإنتاج المسؤولان",
     "title_en": "Responsible Consumption",
-    "desc_ar": "نطلق حملات لفرز النفايات وإعادة التدوير للحد من التلوث البيئي.",
-    "desc_en": "We launch recycling and waste sorting campaigns to reduce environmental pollution."
+    "desc_ar": "نطلق حملات لفرز النفايات وإعادة التدوير.",
+    "desc_en": "We launch recycling and waste sorting campaigns."
   },
   {
     "id": 13,
     "filename": "goal-13.png",
     "title_ar": "العمل المناخي",
     "title_en": "Climate Action",
-    "desc_ar": "ننفذ مشاريع تشجير دورية لمكافحة التصحر وحماية المناخ اللبناني.",
-    "desc_en": "We conduct regular reforestation projects to combat desertification and protect the climate."
+    "desc_ar": "ننفذ مشاريع تشجير دورية لمكافحة التصحر.",
+    "desc_en": "We conduct regular reforestation projects to combat desertification."
+  },
+  {
+    "id": 14,
+    "filename": "goal-14.png",
+    "title_ar": "الحياة تحت الماء",
+    "title_en": "Life Below Water",
+    "desc_ar": "ينظف كشافنا البحري الشواطئ والموانئ.",
+    "desc_en": "Our Sea Scouts organize beach cleanups."
   },
   {
     "id": 15,
     "filename": "goal-15.png",
     "title_ar": "الحياة في البر",
     "title_en": "Life on Land",
-    "desc_ar": "نحمي المحميات الطبيعية ونقيم مخيمات صديقة للبيئة للحفاظ على التنوع البيولوجي.",
-    "desc_en": "We protect nature reserves and run eco-friendly camps to preserve biodiversity."
+    "desc_ar": "نحمي المحميات الطبيعية ونقيم مخيمات صديقة للبيئة.",
+    "desc_en": "We protect nature reserves and run eco-friendly camps."
+  },
+  {
+    "id": 16,
+    "filename": "goal-16.png",
+    "title_ar": "السلام والعدل والمؤسسات القوية",
+    "title_en": "Peace, Justice and Strong Institutions",
+    "desc_ar": "ننشر ثقافة السلام والحوار وننبذ العنف.",
+    "desc_en": "We promote a culture of peace, dialogue, and non-violence."
   },
   {
     "id": 17,
@@ -61,6 +133,6 @@
     "title_ar": "عقد الشراكات لتحقيق الأهداف",
     "title_en": "Partnerships for Goals",
     "desc_ar": "نتعاون مع الجمعيات الأهلية لتعزيز أثرنا في خدمة المجتمع.",
-    "desc_en": "We collaborate with the NGOs to maximize our community impact."
+    "desc_en": "We collaborate with NGOs to maximize our community impact."
   }
 ]
