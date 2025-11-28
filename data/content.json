@@ -39,7 +39,17 @@
 
     "values_title": "الوعد الكشفي",
     "values_quote": "أعاهد مقسماً بالله العظيم على أن أبذل جهدي، لكي أكون خاشعاً لله، ناهجاً نهج رسوله والسلف الصالح. لكي أكون مخلصاً لولي الأمر والوطن. لأن أساعد الناس وباقي المخلوقات في كل حين. لأن أحفظ نفسي قوياً في جسدي، نيراً في عقلي، كريماً في خُلُقي. لأن أعمل بقانون الكشاف.",
-    "values_subtitle": "قيمنا هي بوصلتنا."
+    "values_subtitle": "قيمنا هي بوصلتنا.",
+
+    "map_desc": "ننتشر في جميع المحافظات اللبنانية. استخدم الخريطة للعثور على أقرب فوج إليك وتواصل معنا للانضمام.",
+
+    "footer_mission": "منذ عام 1912، ونحن نربي أجيالاً تخدم الوطن وتلتزم بالقيم.",
+    "footer_links": "روابط سريعة",
+    "footer_contact": "تواصل معنا",
+    "footer_address": "بيروت، لبنان",
+    "footer_email": "info@muslimscout-lb.org",
+    "footer_follow": "تابعونا",
+    "footer_rights": "© 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة."
   },
   "en": {
     "dir": "ltr",
@@ -81,6 +91,16 @@
 
     "values_title": "The Scout Promise",
     "values_quote": "I pledge by Almighty God to do my best, to be submissive to God, following the path of His Messenger and the righteous predecessors. To be loyal to those in authority and the homeland. To help people and all creatures at all times. To keep myself physically strong, mentally enlightened, and morally noble. And to work by the Scout Law.",
-    "values_subtitle": "Our values are our compass."
+    "values_subtitle": "Our values are our compass.",
+
+    "map_desc": "We are present across all Lebanese governorates. Use the map to find your nearest group and join the adventure.",
+
+    "footer_mission": "Since 1912, raising generations that serve the nation and uphold values.",
+    "footer_links": "Quick Links",
+    "footer_contact": "Contact Us",
+    "footer_address": "Beirut, Lebanon",
+    "footer_email": "info@muslimscout-lb.org",
+    "footer_follow": "Follow Us",
+    "footer_rights": "© 2025 Muslim Scout Association Lebanon. All rights reserved."
   }
 }

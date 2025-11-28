@@ -28,21 +28,34 @@
             alt="Muslim Scout Association Logo"
             class="brand-logo"
           />
-          <span data-i18n="logo_text">الكشاف المسلم</span>
+          <span class="logo-text" data-i18n="logo_text">الكشاف المسلم</span>
         </a>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
-          <li><a href="#impact" data-i18n="nav_about">من نحن</a></li>
-          <li><a href="#sections" data-i18n="nav_sections">الحلقات</a></li>
+          <li><a href="#identity" data-i18n="nav_about">من نحن</a></li>
+          <li><a href="#sections" data-i18n="nav_sections">المراحل</a></li>
+          <li><a href="#values" data-i18n="values_title">القيم</a></li>
           <li><a href="#locations" data-i18n="nav_map">المراكز</a></li>
+          <li class="mobile-only">
+            <a href="login.html" data-i18n="btn_login">دخول القادة</a>
+          </li>
         </ul>
 
         <div class="nav-actions">
-          <button id="lang-switch" class="btn btn-outline">English</button>
-          <a href="login.html" class="btn btn-login">
+          <button id="lang-switch" class="btn btn-sm btn-outline">
+            English
+          </button>
+
+          <a href="login.html" class="btn btn-sm btn-login desktop-only">
             <span>🔒</span> <span data-i18n="btn_login">دخول القادة</span>
           </a>
+
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </nav>
@@ -105,7 +118,6 @@
     <section id="values" class="values-section">
       <div class="overlay-dark"></div>
       <div class="container values-content">
-        <div class="scout-sign-icon">✋</div>
         <h2 data-i18n="values_title">الوعد الكشفي</h2>
         <blockquote data-i18n="values_quote">
           "أعد بشرفي أن أبذل جهدي..."
@@ -124,7 +136,13 @@
           <div class="card card-cubs">
             <div class="card-top bg-yellow"></div>
             <div class="card-body">
-              <div class="icon">🐯</div>
+              <div class="card-img-wrapper border-yellow">
+                <img
+                  src="images/cards/cubs.png"
+                  alt="Cubs Scout"
+                  loading="lazy"
+                />
+              </div>
               <h3 data-i18n="cat_cubs">مرحلة الجراميز</h3>
               <p data-i18n="cat_cubs_desc">من عمر 7 إلى 11 سنة</p>
             </div>
@@ -133,7 +151,13 @@
           <div class="card card-scouts">
             <div class="card-top bg-green"></div>
             <div class="card-body">
-              <div class="icon">⚜️</div>
+              <div class="card-img-wrapper border-green">
+                <img
+                  src="images/cards/scouts.png"
+                  alt="Boy Scout"
+                  loading="lazy"
+                />
+              </div>
               <h3 data-i18n="cat_scouts">مرحلة الكشافة</h3>
               <p data-i18n="cat_scouts_desc">من عمر 12 إلى 15 سنة</p>
             </div>
@@ -142,7 +166,13 @@
           <div class="card card-rovers">
             <div class="card-top bg-red"></div>
             <div class="card-body">
-              <div class="icon">🎒</div>
+              <div class="card-img-wrapper border-red">
+                <img
+                  src="images/cards/rovers.png"
+                  alt="Rover Scout"
+                  loading="lazy"
+                />
+              </div>
               <h3 data-i18n="cat_rovers">مرحلة الجوالة</h3>
               <p data-i18n="cat_rovers_desc">من عمر 16 إلى 25 سنة</p>
             </div>
@@ -167,28 +197,83 @@
       </div>
     </section>
 
-    <section id="locations" class="section">
+    <section id="locations" class="section map-section">
       <div class="container">
-        <h2 class="section-title" data-i18n="map_title">
-          ابحث عن الفوج الأقرب إليك
-        </h2>
-        <div id="map"></div>
+        <div class="section-header text-center">
+          <h2 class="section-title" data-i18n="map_title">
+            ابحث عن الفوج الأقرب إليك
+          </h2>
+          <p class="section-subtitle" data-i18n="map_desc">
+            ننتشر في جميع المحافظات...
+          </p>
+        </div>
+
+        <div class="map-wrapper">
+          <div id="map"></div>
+        </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
-        <div
-          class="logo logo-white"
-          style="justify-content: center; margin-bottom: 20px"
-        >
-          <img src="images/logo.svg" alt="Logo" class="brand-logo" />
-          <span data-i18n="logo_text">الكشاف المسلم</span>
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <div class="logo logo-white">
+              <img
+                src="images/logo.svg"
+                alt="Logo"
+                class="brand-logo"
+                style="height: 60px"
+              />
+              <span data-i18n="logo_text">الكشاف المسلم</span>
+            </div>
+            <p class="footer-mission" data-i18n="footer_mission">
+              منذ عام 1912...
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer_links">روابط سريعة</h4>
+            <ul class="footer-links">
+              <li><a href="#identity" data-i18n="nav_about">من نحن</a></li>
+              <li><a href="#sections" data-i18n="nav_sections">الحلقات</a></li>
+              <li><a href="#values" data-i18n="values_title">القيم</a></li>
+              <li>
+                <a href="login.html" data-i18n="btn_login">دخول القادة</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 data-i18n="footer_contact">تواصل معنا</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <span>📍</span>
+                <span data-i18n="footer_address">بيروت، لبنان</span>
+              </li>
+              <li>
+                <span>📧</span>
+                <span data-i18n="footer_email">info@muslimscout.org</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="footer-col">
+            <h4 data-i18n="footer_follow">تابعونا</h4>
+            <div class="social-icons">
+              <a href="#" class="social-link facebook">F</a>
+              <a href="#" class="social-link instagram">I</a>
+              <a href="#" class="social-link twitter">X</a>
+              <a href="#" class="social-link youtube">Y</a>
+            </div>
+          </div> -->
         </div>
 
-        <p data-i18n="copyright">
-          © 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة.
-        </p>
+        <div class="footer-bottom">
+          <p data-i18n="footer_rights">
+            © 2025 جمعية الكشاف المسلم في لبنان. جميع الحقوق محفوظة.
+          </p>
+        </div>
       </div>
     </footer>
 

@@ -47,6 +47,32 @@ document.addEventListener("DOMContentLoaded", async () => {
       updatePageContent(); // This now triggers SDG re-render too
     });
   }
+
+  // --- Mobile Menu Logic ---
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  if (hamburger && navLinks) {
+    // Toggle Menu
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+
+      // Prevent scrolling body when menu is open
+      document.body.style.overflow = navLinks.classList.contains("active")
+        ? "hidden"
+        : "auto";
+    });
+
+    // Close Menu when clicking a link
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+        document.body.style.overflow = "auto";
+      });
+    });
+  }
 });
 
 // Helper: Update Text & Images on Page
