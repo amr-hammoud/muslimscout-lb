@@ -209,24 +209,17 @@ function renderNews(data) {
     .join("");
 }
 
-// Helper: Scroll SDGs (Slider Logic with RTL support)
 window.scrollSDG = function (direction) {
   const container = document.getElementById("sdg-scroll");
-  const scrollAmount = 250; // Adjusted for new card size + gap
+
+  const scrollAmount = 250;
+
   const isRTL = document.documentElement.dir === "rtl";
 
-  // LOGIC:
-  // If LTR: Next(1) -> Scroll Right (+)
-  // If RTL: Next(1) -> Scroll Left (-)
-
-  let scrollValue = direction * scrollAmount;
-
-  if (isRTL) {
-    scrollValue = -scrollValue; // Invert for RTL
-  }
+  const physicalDirection = isRTL ? -direction : direction;
 
   container.scrollBy({
-    left: scrollValue,
+    left: physicalDirection * scrollAmount,
     behavior: "smooth",
   });
 };
