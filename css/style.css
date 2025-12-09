@@ -116,36 +116,12 @@ html[lang="ar"] h3 {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  font-weight: 900;
-  color: var(--primary);
-  font-size: 1.2rem;
   z-index: 1001;
 }
 
-/* Update Logo Size */
 .brand-logo {
-  height: 70px; /* Increased from 45px (approx 150%) */
+  height: 70px;
   width: auto;
-}
-
-/* New Brand Text Styles */
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.brand-name {
-  font-weight: 900;
-  font-size: 1.1rem;
-  color: var(--primary);
-}
-
-.brand-slogan {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--scouts-green); /* Using Scout Green for contrast */
-  letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -289,16 +265,72 @@ html[dir="ltr"] .nav-links {
   left: 0;
 }
 
-/* Hero Section */
+/* =========================================
+   Hero Section (Updated with Flip & Text)
+   ========================================= */
 .hero {
   height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -2;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(82, 37, 131, 0.5);
+  z-index: -1;
+}
+
+.hero-content {
   position: relative;
-  display: flex;
-  align-items: center;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero p.lead {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p.lead {
+    font-size: 1.2rem;
+  }
 }
 
 /* Impact Stats */
