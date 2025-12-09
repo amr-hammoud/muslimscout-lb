@@ -42,16 +42,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading JSON data:", error);
   }
 
-  // 3. Language Switch Logic
-  const langBtn = document.getElementById("lang-switch");
-  if (langBtn) {
-    langBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      currentLang = currentLang === "ar" ? "en" : "ar";
-      langBtn.textContent = currentLang === "ar" ? "English" : "العربية";
-      updatePageContent();
-    });
-  }
+  /// 3. Language Switch Logic (Desktop & Mobile)
+  const langBtns = [
+    document.getElementById("lang-switch"),
+    document.getElementById("lang-switch-mobile"),
+  ];
+
+  langBtns.forEach((btn) => {
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Toggle Language
+        currentLang = currentLang === "ar" ? "en" : "ar";
+
+        // Update Text on ALL buttons
+        const newText = currentLang === "ar" ? "English" : "العربية";
+        langBtns.forEach((b) => {
+          if (b) b.textContent = newText;
+        });
+
+        updatePageContent();
+      });
+    }
+  });
 
   // --- Mobile Menu Logic ---
   const hamburger = document.getElementById("hamburger");
