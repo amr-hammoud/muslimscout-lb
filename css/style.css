@@ -1097,3 +1097,30 @@ a.card:hover {
 a.card h3 {
   color: inherit;
 } /* Keep headers inheriting colors */
+
+/* --- Angled Arrow Icon --- */
+.icon-angled {
+  width: 14px;
+  height: 14px;
+  margin-inline-start: 8px; /* Adds space depending on language direction */
+  fill: none;
+  stroke: currentColor; /* Takes the color of the text */
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+/* Hover Effect: Move diagonally */
+a:hover .icon-angled,
+button:hover .icon-angled {
+  transform: translate(3px, -3px);
+}
+
+/* RTL Hover Fix: Move Top-Left instead of Top-Right */
+html[dir="rtl"] a:hover .icon-angled,
+html[dir="rtl"] button:hover .icon-angled {
+  transform: translate(-3px, -3px);
+}
