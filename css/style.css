@@ -415,10 +415,13 @@ html[dir="ltr"] .nav-links {
 }
 
 .values-content blockquote {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.8;
+  font-family: "AlJazeera", serif;
   margin-bottom: 20px;
+  white-space: pre-line;
+  text-align: start;
 }
 
 /* Cards (Stages) */
