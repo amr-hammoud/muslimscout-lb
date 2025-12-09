@@ -1,6 +1,16 @@
 [
   {
-    "image": "https://scontent.fjed5-1.fna.fbcdn.net/v/t39.30808-6/590310137_122103826299132982_5785718942314429585_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kyTl_fawwxUQ7kNvwH3uEGU&_nc_oc=AdmjZk93AlPQaPXYXNrWBi7nfPtOwYyH6p3lR5yJygMRXw5ydsWuclkApVm-jdoxSG2GpYvXUvT7abQEGWgGHvUr&_nc_zt=23&_nc_ht=scontent.fjed5-1.fna&_nc_gid=_fjYyG98pTdWq-JAZ1J6aw&oh=00_Afgb2iJGDG5zWuyPQgSITUeq7ZGu3f0ovqtZ8OrfBbmWpQ&oe=692F6BD6",
+    "image": "/images/news/1.jpg",
+    "link": "https://www.facebook.com/share/p/1Jacynp862/",
+    "date_ar": "ديسمبر 2025",
+    "date_en": "December 2025",
+    "title_ar": "احتفال تنصيب القيادة العامة الجديدة",
+    "title_en": "",
+    "excerpt_ar": "أقامت القيادة العامة الجديدة لجمعية الكشاف المسلم في لبنان احتفالًا رسميًا بمناسبة تولي القائد العام مروان غزال مهامه...",
+    "excerpt_en": ""
+  },
+  {
+    "image": "/images/news/2.jpg",
     "link": "https://www.facebook.com/share/p/1DJ6Yr3qYQ/",
     "date_ar": "نوفمبر 2025",
     "date_en": "November 2025",
@@ -10,23 +20,13 @@
     "excerpt_en": ""
   },
   {
-    "image": "https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/590253292_122103836727132982_2404712264894629176_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=eyJulH-mZfMQ7kNvwFDToiN&_nc_oc=AdmEvfAt9bdJfL86kTXUwrg-M4prrVidaSjy94EVgVGD1L2NYI4dmSgBO64GWgMm0oO3KwzV2WL1w0YpnGCOsvTv&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=-ZJEd3O9pidll6zZItqPIg&oh=00_AfgubUuKNt0ufNw9KW5bNXuKfMkejnPsQNOBaRL8NnhEaw&oe=692F6BF8",
+    "image": "/images/news/3.jpg",
     "link": "https://www.facebook.com/share/p/1Ek4UXXYz3/",
     "date_ar": "نوفمبر 2025",
     "date_en": "November 2025",
     "title_ar": "رسالة تهنئة",
     "title_en": "",
-    "excerpt_ar": "رسالة تهنئة من قادة الكشاف المسلم في لبنان الى القائد زاهر العنداري بمناسبة انتخابه قائدا عاما للكشاف التقدمي لولاية جديدة ",
-    "excerpt_en": ""
-  },
-  {
-    "image": "https://scontent.fjed6-2.fna.fbcdn.net/v/t39.30808-6/545797928_1173711081452354_7449444369856726420_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Nm_cifhvRwgQ7kNvwHT-0mT&_nc_oc=AdlwJ-Ia_avPks4Bea4WHfzYjh48Hy6xDL0fmLAWHeu620CG7vbFR0I_w_p5hgnOoAdKZSo4Yd96XcptO9x-hQbw&_nc_zt=23&_nc_ht=scontent.fjed6-2.fna&_nc_gid=rb0FjfZxye0c_dIPdkMErA&oh=00_AfhhNWY3Qe2GIT8cCRJ6jVU8TTcddqzbsoInTUIdaUABKg&oe=692F91A9",
-    "link": "https://www.facebook.com/share/p/1Jacynp862/",
-    "date_ar": "سبتمبر 2025",
-    "date_en": "September 2025",
-    "title_ar": "رسالة إلى قيادة المخيم الصيفي 74",
-    "title_en": "",
-    "excerpt_ar": "مع اختتام اعمال المخيم الصيفي ال ٧٤ وجه القائد خضر سراج باشي رسالة الى قيادة المخيم جاء فيه",
+    "excerpt_ar": "رسالة تهنئة من قادة الكشاف المسلم في لبنان الى القائد زاهر العنداري بمناسبة انتخابه قائدا عاما للكشاف التقدمي لولاية جديدة...",
     "excerpt_en": ""
   }
 ]
