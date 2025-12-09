@@ -1,7 +1,7 @@
 {
   "ar": {
     "dir": "rtl",
-    "title": "جمعية الكشاف المسلم في لبنان",
+    "title": "قادة الكشاف المسلم في لبنان",
     "logo_text": "قادة الكشاف المسلم",
     "slogan": "نصنع قادة المستقبل",
     "nav_home": "الرئيسية",
@@ -22,7 +22,7 @@
     "stat_activities": "نشاط سنوي",
 
     "identity_title": "إرث من القيادة منذ 1910",
-    "identity_text": "جمعية الكشاف المسلم في لبنان هي أول حركة كشفية في لبنان والعالم العربي. لأكثر من قرن، ونحن نلتزم بتربية أجيال صالحة، ونغرس فيهم حب الوطن، وخدمة المجتمع، وقيم ديننا الحنيف",
+    "identity_text": "نحن قادة الكشاف المسلم في لبنان، حملنا الأمانة منذ التأسيس الأول. لأكثر من قرن، ونحن نلتزم بتربية أجيال صالحة، ونغرس فيهم حب الوطن، وخدمة المجتمع، وقيم ديننا الحنيف.",
     "identity_btn": "تاريخنا العريق",
 
     "sec_groups_title": "المراحل الكشفية",
@@ -62,8 +62,8 @@
   },
   "en": {
     "dir": "ltr",
-    "title": "Muslim Scout Association",
-    "logo_text": "Muslim Scouts",
+    "title": "Muslim Scout Leaders in Lebanon",
+    "logo_text": "Muslim Scout Leaders",
     "slogan": "Building Future Leaders",
     "nav_home": "Home",
     "nav_about": "About",
@@ -83,7 +83,7 @@
     "stat_activities": "Annual Activities",
 
     "identity_title": "A Legacy of Leadership Since 1910",
-    "identity_text": "The Muslim Scout Association is the first scout movement in Lebanon and the Arab world. For over a century, we have been committed to raising righteous generations, instilling in them love for the homeland, community service, and the values of our upright faith.",
+    "identity_text": "We are the Muslim Scout Leaders in Lebanon. For over a century, we have been committed to raising righteous generations, instilling in them love for the homeland, community service, and the values of our upright faith.",
     "identity_btn": "Our Rich History",
 
     "sec_groups_title": "Scouting Stages",
