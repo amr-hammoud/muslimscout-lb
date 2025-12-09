@@ -1,5 +1,5 @@
 // State Management
-let currentLang = "ar";
+let currentLang = localStorage.getItem("scout_lang") || "ar";
 let translations = {};
 let sdgData = [];
 
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         e.preventDefault();
         // Toggle Language
         currentLang = currentLang === "ar" ? "en" : "ar";
+        localStorage.setItem("scout_lang", currentLang);
 
         // Update Text on ALL buttons
         const newText = currentLang === "ar" ? "English" : "العربية";

@@ -65,7 +65,10 @@ body {
   overflow-x: hidden;
 }
 
-/* FORCE Al Jazeera Font ONLY when language is Arabic */
+html {
+  scroll-behavior: smooth;
+}
+
 html[lang="ar"] body {
   font-family: "AlJazeera", "Segoe UI", Tahoma, sans-serif;
 }
@@ -1126,4 +1129,73 @@ button:hover .icon-angled {
 html[dir="rtl"] a:hover .icon-angled,
 html[dir="rtl"] button:hover .icon-angled {
   transform: translate(-3px, -3px);
+}
+
+/* =========================================
+   UI Polish (Scrollbar & Selection)
+   ========================================= */
+
+/* Custom Scrollbar (Webkit browsers - Chrome/Safari/Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+  border: 2px solid #f1f1f1; /* Creates padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a006b; /* Darker purple on hover */
+}
+
+/* Custom Text Selection */
+::selection {
+  background: var(--cubs-yellow); /* Yellow background */
+  color: var(--primary); /* Purple text */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) #f1f1f1;
+}
+
+/* =========================================
+   Map Popup Styling
+   ========================================= */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px; /* Match site radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 15px;
+  font-family: "AlJazeera", "Segoe UI", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Style the text inside the popup */
+.leaflet-popup-content b {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.leaflet-popup-content span {
+  font-weight: 600;
+  font-size: 0.9rem;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الصفحة غير موجودة</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <style>
+      .error-page {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: var(--bg-gray);
+      }
+      .error-code {
+        font-size: 6rem;
+        font-weight: 900;
+        color: var(--primary);
+        line-height: 1;
+      }
+      .error-text {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        color: var(--text-light);
+      }
+    </style>
+  </head>
+  <body class="error-page">
+    <img
+      src="images/logo.png"
+      alt="Logo"
+      style="height: 80px; margin-bottom: 20px; filter: grayscale(1)"
+    />
+    <div class="error-code">404</div>
+    <p class="error-text">عذراً، يبدو أنك ضللت الطريق!</p>
+    <a href="index.html" class="btn btn-primary"
+      >العودة إلى الرئيسية</a
+    >
+  </body>
+</html>
