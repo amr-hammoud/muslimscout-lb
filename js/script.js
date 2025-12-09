@@ -62,20 +62,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navLinks.classList.toggle("active");
-
-      // Prevent scrolling body when menu is open
       document.body.style.overflow = navLinks.classList.contains("active")
         ? "hidden"
         : "auto";
     });
 
-    // Close Menu when clicking a link
-    document.querySelectorAll(".nav-links a").forEach((link) => {
+    // Close Menu when clicking a regular link
+    document.querySelectorAll(".nav-links a:not(.dropbtn)").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
         navLinks.classList.remove("active");
         document.body.style.overflow = "auto";
       });
+    });
+
+    // Mobile Dropdown Toggle
+    const dropdowns = document.querySelectorAll(".dropdown");
+    dropdowns.forEach((drop) => {
+      const btn = drop.querySelector(".dropbtn");
+      if (btn) {
+        btn.addEventListener("click", (e) => {
+          // Only prevent default on mobile width
+          if (window.innerWidth <= 992) {
+            e.preventDefault();
+            drop.classList.toggle("open");
+          }
+        });
+      }
     });
   }
 });

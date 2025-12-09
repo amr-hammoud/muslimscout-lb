@@ -2,7 +2,8 @@
   "ar": {
     "dir": "rtl",
     "title": "جمعية الكشاف المسلم في لبنان",
-    "logo_text": "الكشاف المسلم",
+    "logo_text": "قادة الكشاف المسلم",
+    "slogan": "نصنع قادة المستقبل",
     "nav_home": "الرئيسية",
     "nav_about": "من نحن",
     "nav_sections": "المراحل",
@@ -63,6 +64,7 @@
     "dir": "ltr",
     "title": "Muslim Scout Association",
     "logo_text": "Muslim Scouts",
+    "slogan": "Building Future Leaders",
     "nav_home": "Home",
     "nav_about": "About",
     "nav_sections": "Stages",

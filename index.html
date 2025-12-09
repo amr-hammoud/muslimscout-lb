@@ -22,15 +22,48 @@
   <body>
     <nav class="navbar">
       <div class="container nav-container">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img src="images/logo.png" alt="Logo" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-name" data-i18n="logo_text">الكشاف المسلم</span>
+            <span class="brand-slogan" data-i18n="slogan"
+              >نصنع قادة المستقبل</span
+            >
+          </div>
         </a>
 
         <ul class="nav-links" id="nav-links">
-          <li><a href="#" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
           <li><a href="#identity" data-i18n="nav_about">من نحن</a></li>
           <li><a href="#news" data-i18n="nav_media">المركز الإعلامي</a></li>
-          <li><a href="#sections" data-i18n="nav_sections">المراحل</a></li>
+
+          <li class="dropdown">
+            <a href="#sections" class="dropbtn">
+              <span data-i18n="nav_sections">المراحل</span>
+              <span class="arrow">▼</span>
+            </a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="cubs.html" data-i18n="cat_cubs">الجراميز والزهرات</a>
+              </li>
+              <li>
+                <a href="scouts.html" data-i18n="cat_scouts"
+                  >الكشافة والمرشدات</a
+                >
+              </li>
+              <li>
+                <a href="advanced.html" data-i18n="cat_advanced"
+                  >الكشاف المتقدم</a
+                >
+              </li>
+              <li>
+                <a href="rovers.html" data-i18n="cat_rovers"
+                  >الجوالة والدليلات</a
+                >
+              </li>
+            </ul>
+          </li>
+
           <li><a href="#locations" data-i18n="nav_map">المراكز</a></li>
           <li class="mobile-only">
             <a href="login.html" data-i18n="btn_login">دخول القادة</a>
@@ -117,21 +150,21 @@
           المراحل الكشفية
         </h2>
         <div class="cards-grid">
-          <div class="card card-cubs">
+          <a href="cubs.html" class="card card-cubs">
             <div class="card-top bg-yellow"></div>
             <div class="card-body">
-              <div class="card-img-wrapper border-yellow">
+              <div class="card-img-wrapper">
                 <img src="images/cards/cubs.png" alt="Cubs" loading="lazy" />
               </div>
               <h3 data-i18n="cat_cubs">الجراميز والزهرات</h3>
               <p data-i18n="cat_cubs_desc">من 7 إلى 10 سنوات</p>
             </div>
-          </div>
+          </a>
 
-          <div class="card card-scouts">
+          <a href="scouts.html" class="card card-scouts">
             <div class="card-top bg-green"></div>
             <div class="card-body">
-              <div class="card-img-wrapper border-green">
+              <div class="card-img-wrapper">
                 <img
                   src="images/cards/scouts.png"
                   alt="Scouts"
@@ -141,28 +174,27 @@
               <h3 data-i18n="cat_scouts">الكشافة والمرشدات</h3>
               <p data-i18n="cat_scouts_desc">من 11 إلى 14 سنة</p>
             </div>
-          </div>
+          </a>
 
-          <div class="card card-advanced">
+          <a href="advanced.html" class="card card-advanced">
             <div class="card-top bg-orange"></div>
             <div class="card-body">
-              <div class="card-img-wrapper border-orange">
+              <div class="card-img-wrapper">
                 <img
                   src="images/cards/advanced.png"
                   alt="Advanced"
                   loading="lazy"
-                  style="filter: sepia(0.5)"
                 />
               </div>
               <h3 data-i18n="cat_advanced">الكشاف المتقدم</h3>
               <p data-i18n="cat_advanced_desc">من 15 إلى 17 سنة</p>
             </div>
-          </div>
+          </a>
 
-          <div class="card card-rovers">
+          <a href="rovers.html" class="card card-rovers">
             <div class="card-top bg-red"></div>
             <div class="card-body">
-              <div class="card-img-wrapper border-red">
+              <div class="card-img-wrapper">
                 <img
                   src="images/cards/rovers.png"
                   alt="Rovers"
@@ -172,7 +204,7 @@
               <h3 data-i18n="cat_rovers">الجوالة والدليلات</h3>
               <p data-i18n="cat_rovers_desc">من 18 إلى 24 سنة</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

@@ -122,9 +122,30 @@ html[lang="ar"] h3 {
   z-index: 1001;
 }
 
+/* Update Logo Size */
 .brand-logo {
-  height: 45px;
+  height: 70px; /* Increased from 45px (approx 150%) */
   width: auto;
+}
+
+/* New Brand Text Styles */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.brand-slogan {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--scouts-green); /* Using Scout Green for contrast */
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -271,7 +292,7 @@ html[dir="ltr"] .nav-links {
 /* Hero Section */
 .hero {
   height: 90vh;
-  background-image: url("../images/hero-bg.png");
+  background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -807,3 +828,240 @@ a.news-card p {
     padding: 10px 20px;
   }
 }
+
+/* =========================================
+   Login Page Styles
+   ========================================= */
+.login-page {
+  background: linear-gradient(135deg, var(--bg-gray) 0%, #e6e6e6 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.login-header h2 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.login-header p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* Flip text align for LTR */
+html[dir="ltr"] .form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.login-footer a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  color: var(--primary);
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+/* --- Dropdown Menu Styles --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown .arrow {
+  font-size: 0.7rem;
+  margin-inline-start: 5px;
+  transition: transform 0.3s;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0; /* Align right for Arabic */
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1002;
+  padding: 10px 0;
+  list-style: none;
+  text-align: start;
+}
+
+/* LTR Alignment */
+html[dir="ltr"] .dropdown-content {
+  right: auto;
+  left: 0;
+}
+
+.dropdown-content li {
+  margin: 0;
+}
+
+.dropdown-content a {
+  color: var(--text-dark);
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--bg-gray);
+  color: var(--primary);
+}
+
+/* Show on Hover (Desktop) */
+@media (min-width: 993px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Dropdown Styling */
+@media (max-width: 992px) {
+  .dropdown {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    position: static; /* Stack normally on mobile */
+    display: none; /* Hidden by default */
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.1); /* Slight highlight */
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    color: white; /* White text for mobile menu */
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  /* We will use JS to toggle 'open' class on mobile */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+}
+
+/* --- Clickable Card Fixes --- */
+a.card {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Keep text color */
+  display: block; /* Ensure it behaves like a box */
+  height: 100%; /* Full height */
+}
+
+a.card:hover {
+  transform: translateY(-10px); /* Keep the hover effect */
+  cursor: pointer;
+}
+
+a.card h3 {
+  color: inherit;
+} /* Keep headers inheriting colors */
