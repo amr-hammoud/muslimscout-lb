@@ -2,7 +2,7 @@
   "commissions": {
     "beirut": { "color": "#E63312", "label": "مفوضية بيروت" },
     "north": { "color": "#FFDD00", "label": "مفوضية الشمال" },
-    "bekaa": { "color": "#CEA800", "label": "مفوضية البقاع" },
+    "bekaa": { "color": "#a1721a", "label": "مفوضية البقاع" },
     "baalbek": { "color": "#CEA800", "label": "مفوضية بعلبك الهرمل" },
     "south": { "color": "#EBA42E", "label": "مفوضية الجنوب" },
     "mount": { "color": "#005F27", "label": "مفوضية جبل لبنان" },
