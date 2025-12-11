@@ -5,7 +5,7 @@ let sdgData = [];
 
 document.addEventListener("DOMContentLoaded", async () => {
   // 1. Initialize Leaflet Map
-  const map = L.map("map").setView([33.8547, 35.8623], 9);
+  const map = L.map("map").setView([33.8547, 35.8623], 8);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors",
   }).addTo(map);
