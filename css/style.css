@@ -1199,3 +1199,11 @@ html[dir="rtl"] button:hover .icon-angled {
   font-weight: 600;
   font-size: 0.9rem;
 }
+
+/* Version Tag Styling */
+.version-tag {
+  opacity: 0.5;
+  font-size: 0.85em;
+  margin-inline-start: 15px; /* Adds space based on language direction */
+  font-family: monospace; /* Gives it a technical look */
+}

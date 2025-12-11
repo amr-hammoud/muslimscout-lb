@@ -1,0 +1,9 @@
+{
+  "name": "Muslim Scout Leaders",
+  "short_name": "MSL",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#522583",
+  "version": "1.0.0"
+}

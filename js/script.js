@@ -105,6 +105,21 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
   }
+
+  // --- Auto-Version from Manifest ---
+  fetch("manifest.json")
+    .then((response) => response.json())
+    .then((data) => {
+      // 1. Log to Console (Works on all pages)
+      console.log(`App Version: v${data.version}`);
+
+      // 2. Display on Index Page Only
+      const versionEl = document.getElementById("app-version");
+      if (versionEl) {
+        versionEl.textContent = `v${data.version}`;
+      }
+    })
+    .catch((error) => console.error("Could not load version:", error));
 });
 
 // Helper: Update Text & Images on Page
