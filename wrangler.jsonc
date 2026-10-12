@@ -1,0 +1,13 @@
+// Live demo of the Muslim Scouts Lebanon site at muslimscout.amrhammoud.com
+// (Cloudflare Workers static assets). The repo root is the site.
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "muslimscout-demo",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": ".", "html_handling": "auto-trailing-slash", "not_found_handling": "404-page" },
+  "workers_dev": false,
+  "preview_urls": true,
+  // Required by `wrangler preview`, which Workers Builds runs for non-production branches.
+  "previews": {},
+  "routes": [{ "pattern": "muslimscout.amrhammoud.com", "custom_domain": true }]
+}
