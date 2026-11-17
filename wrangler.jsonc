@@ -1,4 +1,4 @@
-// Live demo of the Muslim Scouts Lebanon site at muslimscout.amrhammoud.com
+// Live demo of the Muslim Scouts Lebanon site at muslimscout.makebase.dev
 // (Cloudflare Workers static assets). The repo root is the site.
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
@@ -9,5 +9,9 @@
   "preview_urls": true,
   // Required by `wrangler preview`, which Workers Builds runs for non-production branches.
   "previews": {},
-  "routes": [{ "pattern": "muslimscout.amrhammoud.com", "custom_domain": true }]
+  "routes": [
+    { "pattern": "muslimscout.makebase.dev", "custom_domain": true },
+    // Kept only so the amrhammoud.com zone redirect rule can 301 it to muslimscout.makebase.dev.
+    { "pattern": "muslimscout.amrhammoud.com", "custom_domain": true }
+  ]
 }
